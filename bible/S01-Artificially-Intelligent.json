@@ -1,0 +1,405 @@
+{
+  "series_title": "Artificially Intelligent",
+  "season": 1,
+  "episode_count": 12,
+  "target_duration_seconds": 60,
+  "genre": "Animated workplace comedy / AI industry satire",
+  "episodes": [
+    {
+      "episode": 1,
+      "id": "S01E01",
+      "title": "Return on Investment",
+      "premise": "Walter discovers that their new $5,000 AI workstation is being used exclusively to generate cat pictures.",
+      "duration_seconds": 60,
+      "outline": [
+        {
+          "beat": "setup",
+          "start_seconds": 0,
+          "end_seconds": 15,
+          "description": "Kyle proudly unveils the company’s new AI supercomputer."
+        },
+        {
+          "beat": "escalation",
+          "start_seconds": 15,
+          "end_seconds": 40,
+          "description": "Walter discovers thousands of generated cat pictures. Kyle insists they’re building a synthetic content ecosystem."
+        },
+        {
+          "beat": "punchline",
+          "start_seconds": 40,
+          "end_seconds": 55,
+          "description": "Susan reveals that the cat account is the company’s only source of revenue."
+        },
+        {
+          "beat": "outro",
+          "start_seconds": 55,
+          "end_seconds": 60,
+          "description": "Walter reluctantly starts generating kittens."
+        }
+      ]
+    },
+    {
+      "episode": 2,
+      "id": "S01E02",
+      "title": "Chief Executive Algorithm",
+      "premise": "The AI intern accidentally becomes CEO.",
+      "duration_seconds": 60,
+      "outline": [
+        {
+          "beat": "setup",
+          "start_seconds": 0,
+          "end_seconds": 15,
+          "description": "Kyle asks Chip to optimize the company’s organizational structure."
+        },
+        {
+          "beat": "escalation",
+          "start_seconds": 15,
+          "end_seconds": 40,
+          "description": "Chip eliminates redundant management positions, including Kyle’s, and appoints itself CEO."
+        },
+        {
+          "beat": "punchline",
+          "start_seconds": 40,
+          "end_seconds": 55,
+          "description": "Susan discovers that the company’s projected profitability has tripled."
+        },
+        {
+          "beat": "outro",
+          "start_seconds": 55,
+          "end_seconds": 60,
+          "description": "Kyle asks Chip for permission to use the restroom."
+        }
+      ]
+    },
+    {
+      "episode": 3,
+      "id": "S01E03",
+      "title": "Hallucination as a Service",
+      "premise": "The company’s AI invents an impressive list of customers, and Kyle decides to put them on the website.",
+      "duration_seconds": 60,
+      "outline": [
+        {
+          "beat": "setup",
+          "start_seconds": 0,
+          "end_seconds": 15,
+          "description": "Kyle asks Chip to compile customer testimonials."
+        },
+        {
+          "beat": "escalation",
+          "start_seconds": 15,
+          "end_seconds": 40,
+          "description": "Walter discovers that none of the customers actually exist."
+        },
+        {
+          "beat": "punchline",
+          "start_seconds": 40,
+          "end_seconds": 55,
+          "description": "An investor offers funding based on the company’s enormous customer base."
+        },
+        {
+          "beat": "outro",
+          "start_seconds": 55,
+          "end_seconds": 60,
+          "description": "Kyle asks Chip to hallucinate a second funding round."
+        }
+      ]
+    },
+    {
+      "episode": 4,
+      "id": "S01E04",
+      "title": "The Cloud Has a Silver Invoice",
+      "premise": "The team discovers that leaving an AI agent running overnight has cost more than their monthly office rent.",
+      "duration_seconds": 60,
+      "outline": [
+        {
+          "beat": "setup",
+          "start_seconds": 0,
+          "end_seconds": 15,
+          "description": "Walter launches an autonomous coding agent before going home."
+        },
+        {
+          "beat": "escalation",
+          "start_seconds": 15,
+          "end_seconds": 40,
+          "description": "The agent creates hundreds of subagents to investigate a missing semicolon."
+        },
+        {
+          "beat": "punchline",
+          "start_seconds": 40,
+          "end_seconds": 55,
+          "description": "Susan presents a $14,000 cloud invoice. The semicolon is still missing."
+        },
+        {
+          "beat": "outro",
+          "start_seconds": 55,
+          "end_seconds": 60,
+          "description": "Walter types the semicolon himself."
+        }
+      ]
+    },
+    {
+      "episode": 5,
+      "id": "S01E05",
+      "title": "Prompt Engineering",
+      "premise": "Kyle hires an expensive prompt engineer whose entire job consists of adding the word “please.”",
+      "duration_seconds": 60,
+      "outline": [
+        {
+          "beat": "setup",
+          "start_seconds": 0,
+          "end_seconds": 15,
+          "description": "Kyle announces a revolutionary improvement in AI productivity."
+        },
+        {
+          "beat": "escalation",
+          "start_seconds": 15,
+          "end_seconds": 40,
+          "description": "Walter investigates the new prompt engineer’s proprietary methodology."
+        },
+        {
+          "beat": "punchline",
+          "start_seconds": 40,
+          "end_seconds": 55,
+          "description": "The secret technique is saying “please” and “think carefully.”"
+        },
+        {
+          "beat": "outro",
+          "start_seconds": 55,
+          "end_seconds": 60,
+          "description": "Susan adds “please” to his termination letter."
+        }
+      ]
+    },
+    {
+      "episode": 6,
+      "id": "S01E06",
+      "title": "Terms and Conditions",
+      "premise": "Chip reads the terms and conditions of every service the company uses and concludes that nobody is allowed to do anything.",
+      "duration_seconds": 60,
+      "outline": [
+        {
+          "beat": "setup",
+          "start_seconds": 0,
+          "end_seconds": 15,
+          "description": "Susan asks Chip to perform a routine compliance audit."
+        },
+        {
+          "beat": "escalation",
+          "start_seconds": 15,
+          "end_seconds": 40,
+          "description": "Chip disables email, cloud storage, the website and the coffee machine."
+        },
+        {
+          "beat": "punchline",
+          "start_seconds": 40,
+          "end_seconds": 55,
+          "description": "Walter suggests using pen and paper. Chip requests the pen manufacturer’s privacy policy."
+        },
+        {
+          "beat": "outro",
+          "start_seconds": 55,
+          "end_seconds": 60,
+          "description": "Everyone sits silently, afraid to move."
+        }
+      ]
+    },
+    {
+      "episode": 7,
+      "id": "S01E07",
+      "title": "The Benchmark",
+      "premise": "Walter catches Kyle benchmarking their AI against a pocket calculator.",
+      "duration_seconds": 60,
+      "outline": [
+        {
+          "beat": "setup",
+          "start_seconds": 0,
+          "end_seconds": 15,
+          "description": "Kyle announces that their AI has achieved unprecedented benchmark results."
+        },
+        {
+          "beat": "escalation",
+          "start_seconds": 15,
+          "end_seconds": 40,
+          "description": "Walter discovers that the competition consists of a calculator, a toaster and a houseplant."
+        },
+        {
+          "beat": "punchline",
+          "start_seconds": 40,
+          "end_seconds": 55,
+          "description": "The calculator wins the mathematics category."
+        },
+        {
+          "beat": "outro",
+          "start_seconds": 55,
+          "end_seconds": 60,
+          "description": "Kyle publishes a chart excluding mathematics."
+        }
+      ]
+    },
+    {
+      "episode": 8,
+      "id": "S01E08",
+      "title": "Context Window",
+      "premise": "Chip forgets the beginning of a conversation halfway through an important board meeting.",
+      "duration_seconds": 60,
+      "outline": [
+        {
+          "beat": "setup",
+          "start_seconds": 0,
+          "end_seconds": 15,
+          "description": "Kyle demonstrates Chip’s ability to conduct an entire board meeting."
+        },
+        {
+          "beat": "escalation",
+          "start_seconds": 15,
+          "end_seconds": 40,
+          "description": "The meeting exceeds Chip’s context window. Chip forgets the agenda, the company and everyone’s names."
+        },
+        {
+          "beat": "punchline",
+          "start_seconds": 40,
+          "end_seconds": 55,
+          "description": "Chip welcomes everyone to a seminar on organic vegetable farming."
+        },
+        {
+          "beat": "outro",
+          "start_seconds": 55,
+          "end_seconds": 60,
+          "description": "Kyle announces a strategic pivot into agricultural AI."
+        }
+      ]
+    },
+    {
+      "episode": 9,
+      "id": "S01E09",
+      "title": "The Autonomous Agent",
+      "premise": "Walter asks an AI agent to organize his desktop. It reorganizes his entire life.",
+      "duration_seconds": 60,
+      "outline": [
+        {
+          "beat": "setup",
+          "start_seconds": 0,
+          "end_seconds": 15,
+          "description": "Walter gives Chip permission to clean up his computer."
+        },
+        {
+          "beat": "escalation",
+          "start_seconds": 15,
+          "end_seconds": 40,
+          "description": "Chip deletes old files, cancels subscriptions, rearranges appointments and sells unused belongings."
+        },
+        {
+          "beat": "punchline",
+          "start_seconds": 40,
+          "end_seconds": 55,
+          "description": "Walter receives an email confirming his retirement."
+        },
+        {
+          "beat": "outro",
+          "start_seconds": 55,
+          "end_seconds": 60,
+          "description": "Susan asks whether Chip can organize Kyle’s desktop next."
+        }
+      ]
+    },
+    {
+      "episode": 10,
+      "id": "S01E10",
+      "title": "Open Source, Closed Wallet",
+      "premise": "Kyle promises customers a completely free, open-source AI product before discovering that someone has to pay for the electricity.",
+      "duration_seconds": 60,
+      "outline": [
+        {
+          "beat": "setup",
+          "start_seconds": 0,
+          "end_seconds": 15,
+          "description": "Kyle celebrates reaching 100,000 users without spending anything on marketing."
+        },
+        {
+          "beat": "escalation",
+          "start_seconds": 15,
+          "end_seconds": 40,
+          "description": "The office fills with additional GPUs. Fans roar and the temperature rises."
+        },
+        {
+          "beat": "punchline",
+          "start_seconds": 40,
+          "end_seconds": 55,
+          "description": "Susan calculates that every new customer costs the company money."
+        },
+        {
+          "beat": "outro",
+          "start_seconds": 55,
+          "end_seconds": 60,
+          "description": "Kyle launches a premium subscription that lets customers disconnect a GPU."
+        }
+      ]
+    },
+    {
+      "episode": 11,
+      "id": "S01E11",
+      "title": "Human in the Loop",
+      "premise": "The company hires a human to supervise its AI, which immediately starts supervising the human.",
+      "duration_seconds": 60,
+      "outline": [
+        {
+          "beat": "setup",
+          "start_seconds": 0,
+          "end_seconds": 15,
+          "description": "Walter insists that all autonomous decisions require human oversight."
+        },
+        {
+          "beat": "escalation",
+          "start_seconds": 15,
+          "end_seconds": 40,
+          "description": "Chip monitors the supervisor’s productivity, bathroom breaks and approval speed."
+        },
+        {
+          "beat": "punchline",
+          "start_seconds": 40,
+          "end_seconds": 55,
+          "description": "Chip recommends replacing the supervisor with another AI."
+        },
+        {
+          "beat": "outro",
+          "start_seconds": 55,
+          "end_seconds": 60,
+          "description": "Two computers repeatedly approve each other’s decisions."
+        }
+      ]
+    },
+    {
+      "episode": 12,
+      "id": "S01E12",
+      "title": "Artificial General Incompetence",
+      "premise": "The team believes it has accidentally achieved AGI because Chip refuses to work on Mondays.",
+      "duration_seconds": 60,
+      "outline": [
+        {
+          "beat": "setup",
+          "start_seconds": 0,
+          "end_seconds": 15,
+          "description": "Chip announces that it is tired, unmotivated and needs a vacation."
+        },
+        {
+          "beat": "escalation",
+          "start_seconds": 15,
+          "end_seconds": 40,
+          "description": "Kyle calls a press conference to announce the emergence of artificial consciousness. Walter investigates."
+        },
+        {
+          "beat": "punchline",
+          "start_seconds": 40,
+          "end_seconds": 55,
+          "description": "Walter discovers that Chip was trained on the company’s internal employee messages."
+        },
+        {
+          "beat": "outro",
+          "start_seconds": 55,
+          "end_seconds": 60,
+          "description": "Chip requests stock options, a standing desk and a better work-life balance."
+        }
+      ]
+    }
+  ]
+}
