@@ -2,6 +2,7 @@ __pycache__/
 .venv/
 *.mp4
 *.wav
+/assets/music/*.mp3
 *.performance.zip
 *.safetensors
 *.gguf

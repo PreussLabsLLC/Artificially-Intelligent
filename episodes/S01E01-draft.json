@@ -13,11 +13,11 @@
       "dialogue": [
         {
           "speaker": "Kyle",
-          "line": "Look, this beast runs three GPUs at once!"
+          "line": "Look, this beast runs four GPUs at once!"
         },
         {
           "speaker": "Walter",
-          "line": "Three GPUs? That’s a lot of horsepower for a…?"
+          "line": "Four GPUs? That’s a lot of horsepower for a…?"
         },
         {
           "speaker": "Kyle",

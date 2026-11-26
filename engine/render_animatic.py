@@ -31,10 +31,11 @@ def lip_sync(timeline, samples, rate, temp):
             raise ValueError(f"Rhubarb found no speech in {cue['line']!r}")
 
 
-def tower(lights):
+def tower(light_phase):
     lamps = "".join(
-        f'<rect x="93" y="{y}" width="54" height="5" rx="2" fill="{fill}"/>'
-        for y, fill in zip((305, 319, 333), ("#8cd09c" if lights else "#55766c", "#669e87", "#91bbad"))
+        f'<rect x="93" y="{y}" width="54" height="5" rx="2" '
+        f'fill="{"#55766c" if index == light_phase else "#8cd09c"}"/>'
+        for index, y in enumerate((305, 319, 333, 347))
     )
     return f"""
 <ellipse cx="129" cy="453" rx="65" ry="10" fill="#343941" opacity=".25"/>
@@ -66,7 +67,7 @@ def monitor(beat, reveal, result):
         "outro": "Generate kittens",
     }[beat]
     if beat == "setup":
-        body = '<text x="18" y="59">3 GPUs online</text><path d="M18 72h163" stroke="#88ad98" stroke-width="5"/>'
+        body = '<text x="18" y="59">4 GPUs online</text><path d="M18 72h163" stroke="#88ad98" stroke-width="5"/>'
     elif beat == "escalation":
         tiles = "".join(cat_tile(17 + index % 3 * 57, 39 + index // 3 * 32, color)
                         for index, color in enumerate(("#bc926b", "#b2a8aa", "#928c83",
@@ -141,7 +142,7 @@ def frame(index, cue, beat, rate):
     parts = [
         OFFICE,
         monitor(beat, reveal, closing),
-        tower(int(pose_time * 2) % 2),
+        tower(int(pose_time * 2) % 4),
         walter(mouth["Walter"], walter_pose, x=405 if beat == "outro" else 290),
     ]
     if beat != "outro":

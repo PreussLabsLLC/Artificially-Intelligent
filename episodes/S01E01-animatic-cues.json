@@ -1,6 +1,6 @@
 {
-  "audio_sha256": "d780ea1a86180208b65a025c38120156b99a68f2f095b83691ffd99473bbaae1",
-  "timing_sha256": "6d8ff256de007872097e01ed5614e944ee9009d345e4e26b8096efb13ccb37f9",
+  "audio_sha256": "fdfde55b7176645047c784a343d1453c1e8e2c1b8d34719199179363c9bff3c6",
+  "timing_sha256": "9c3f76d029b43ef2191da7fb97d7754018195933793180f5d5c70e4d2907cc71",
   "timeline": [
     {
       "beat": "setup",
@@ -13,7 +13,7 @@
     {
       "beat": "setup",
       "speaker": "Kyle",
-      "line": "Look, this beast runs three GPUs at once!",
+      "line": "Look, this beast runs four GPUs at once!",
       "source": "Kokoro am_fenrir",
       "start_sample": 52270,
       "end_sample": 106944,
@@ -42,56 +42,61 @@
         },
         {
           "start": 0.4,
-          "end": 1.12,
+          "end": 0.89,
           "value": "B"
         },
         {
-          "start": 1.12,
-          "end": 1.19,
-          "value": "C"
+          "start": 0.89,
+          "end": 1.03,
+          "value": "G"
         },
         {
-          "start": 1.19,
-          "end": 1.26,
+          "start": 1.03,
+          "end": 1.1,
+          "value": "E"
+        },
+        {
+          "start": 1.1,
+          "end": 1.24,
           "value": "B"
         },
         {
-          "start": 1.26,
-          "end": 1.34,
+          "start": 1.24,
+          "end": 1.32,
           "value": "A"
         },
         {
-          "start": 1.34,
-          "end": 1.53,
+          "start": 1.32,
+          "end": 1.49,
           "value": "B"
         },
         {
-          "start": 1.53,
-          "end": 1.74,
+          "start": 1.49,
+          "end": 1.7,
           "value": "F"
         },
         {
-          "start": 1.74,
-          "end": 1.81,
+          "start": 1.7,
+          "end": 1.77,
           "value": "B"
         },
         {
-          "start": 1.81,
-          "end": 1.88,
+          "start": 1.77,
+          "end": 1.84,
           "value": "F"
         },
         {
-          "start": 1.88,
-          "end": 2.09,
+          "start": 1.84,
+          "end": 2.05,
           "value": "C"
         },
         {
-          "start": 2.09,
-          "end": 2.23,
+          "start": 2.05,
+          "end": 2.19,
           "value": "B"
         },
         {
-          "start": 2.23,
+          "start": 2.19,
           "end": 2.27,
           "value": "X"
         }
@@ -100,7 +105,7 @@
     {
       "beat": "setup",
       "speaker": "Walter",
-      "line": "Three GPUs? That’s a lot of horsepower for a…?",
+      "line": "Four GPUs? That’s a lot of horsepower for a…?",
       "source": "Kokoro am_michael",
       "start_sample": 114624,
       "end_sample": 195961,
@@ -114,106 +119,116 @@
         },
         {
           "start": 0.05,
-          "end": 0.5,
+          "end": 0.17,
+          "value": "G"
+        },
+        {
+          "start": 0.17,
+          "end": 0.24,
+          "value": "E"
+        },
+        {
+          "start": 0.24,
+          "end": 0.45,
           "value": "B"
         },
         {
-          "start": 0.5,
-          "end": 0.58,
+          "start": 0.45,
+          "end": 0.53,
           "value": "A"
         },
         {
-          "start": 0.58,
-          "end": 0.82,
+          "start": 0.53,
+          "end": 0.78,
           "value": "B"
         },
         {
-          "start": 0.82,
-          "end": 1.13,
+          "start": 0.78,
+          "end": 1.09,
           "value": "F"
         },
         {
-          "start": 1.13,
-          "end": 1.17,
+          "start": 1.09,
+          "end": 1.13,
           "value": "C"
         },
         {
-          "start": 1.17,
-          "end": 1.28,
+          "start": 1.13,
+          "end": 1.24,
           "value": "B"
         },
         {
-          "start": 1.28,
-          "end": 1.62,
+          "start": 1.24,
+          "end": 1.57,
           "value": "X"
         },
         {
-          "start": 1.62,
-          "end": 1.91,
+          "start": 1.57,
+          "end": 1.87,
           "value": "B"
         },
         {
-          "start": 1.91,
-          "end": 1.98,
+          "start": 1.87,
+          "end": 1.94,
           "value": "C"
         },
         {
-          "start": 1.98,
-          "end": 2.05,
+          "start": 1.94,
+          "end": 2.01,
           "value": "H"
         },
         {
-          "start": 2.05,
-          "end": 2.12,
+          "start": 2.01,
+          "end": 2.08,
           "value": "B"
         },
         {
-          "start": 2.12,
-          "end": 2.19,
+          "start": 2.08,
+          "end": 2.15,
           "value": "G"
         },
         {
-          "start": 2.19,
-          "end": 2.4,
+          "start": 2.15,
+          "end": 2.36,
           "value": "E"
         },
         {
-          "start": 2.4,
-          "end": 2.48,
+          "start": 2.36,
+          "end": 2.44,
           "value": "A"
         },
         {
-          "start": 2.48,
-          "end": 2.69,
+          "start": 2.44,
+          "end": 2.63,
           "value": "C"
         },
         {
-          "start": 2.69,
-          "end": 2.83,
+          "start": 2.63,
+          "end": 2.77,
           "value": "E"
         },
         {
-          "start": 2.83,
-          "end": 2.9,
+          "start": 2.77,
+          "end": 2.84,
           "value": "G"
         },
         {
-          "start": 2.9,
-          "end": 2.97,
+          "start": 2.84,
+          "end": 2.91,
           "value": "E"
         },
         {
-          "start": 2.97,
-          "end": 3.04,
+          "start": 2.91,
+          "end": 2.98,
           "value": "B"
         },
         {
-          "start": 3.04,
-          "end": 3.25,
-          "value": "C"
+          "start": 2.98,
+          "end": 3.26,
+          "value": "D"
         },
         {
-          "start": 3.25,
+          "start": 3.26,
           "end": 3.38,
           "value": "X"
         }

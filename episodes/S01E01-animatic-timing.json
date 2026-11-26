@@ -1,7 +1,7 @@
 {
   "episode": "S01E01",
   "sample_rate": 24000,
-  "audio_file": "S01E01-animatic-audio.wav",
+  "audio_file": "S01E01-animatic-four-gpus-audio.wav",
   "duration_seconds": 60.0,
   "timeline": [
     {
@@ -15,7 +15,7 @@
     {
       "beat": "setup",
       "speaker": "Kyle",
-      "line": "Look, this beast runs three GPUs at once!",
+      "line": "Look, this beast runs four GPUs at once!",
       "source": "Kokoro am_fenrir",
       "start_sample": 52270,
       "end_sample": 106944,
@@ -25,7 +25,7 @@
     {
       "beat": "setup",
       "speaker": "Walter",
-      "line": "Three GPUs? That’s a lot of horsepower for a…?",
+      "line": "Four GPUs? That’s a lot of horsepower for a…?",
       "source": "Kokoro am_michael",
       "start_sample": 114624,
       "end_sample": 195961,
