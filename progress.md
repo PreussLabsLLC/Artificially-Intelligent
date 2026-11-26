@@ -146,3 +146,5 @@ Drafted English, standard German, and neutral Latin American Spanish SRTs from t
 Promoted the verified subtitle mux to `output/S01E01-Return-On-Investment.mp4` after confirming its audio and video bitstream hashes matched the previous final export. Updated `engine/render_s01e01_final.py` to embed the three SRT files by default. The end-to-end test in `santa-dev` produced 60.000-second audio and video streams and subtitle tracks tagged `eng`, `deu`, and `spa`.
 
 Moved eight S01E01 review MP4s into `review/` beside `output/`. Verified their hashes after the move and confirmed the final export in `output/` retained its hash.
+
+Added the approved subtitled `output/S01E01-Return-On-Investment.mp4` to Git at the user's request. FFprobe verified the 60-second picture and audio and the three subtitle language tags.
