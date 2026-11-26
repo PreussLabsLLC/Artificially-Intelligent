@@ -1,0 +1,1367 @@
+{
+  "audio_sha256": "d780ea1a86180208b65a025c38120156b99a68f2f095b83691ffd99473bbaae1",
+  "timing_sha256": "6d8ff256de007872097e01ed5614e944ee9009d345e4e26b8096efb13ccb37f9",
+  "timeline": [
+    {
+      "beat": "setup",
+      "action": "Kyle unveils the workstation",
+      "start_sample": 0,
+      "end_sample": 52270,
+      "start_seconds": 0.0,
+      "end_seconds": 2.178
+    },
+    {
+      "beat": "setup",
+      "speaker": "Kyle",
+      "line": "Look, this beast runs three GPUs at once!",
+      "source": "Kokoro am_fenrir",
+      "start_sample": 52270,
+      "end_sample": 106944,
+      "start_seconds": 2.178,
+      "end_seconds": 4.456,
+      "mouth_cues": [
+        {
+          "start": 0.0,
+          "end": 0.04,
+          "value": "X"
+        },
+        {
+          "start": 0.04,
+          "end": 0.11,
+          "value": "F"
+        },
+        {
+          "start": 0.11,
+          "end": 0.32,
+          "value": "B"
+        },
+        {
+          "start": 0.32,
+          "end": 0.4,
+          "value": "A"
+        },
+        {
+          "start": 0.4,
+          "end": 1.12,
+          "value": "B"
+        },
+        {
+          "start": 1.12,
+          "end": 1.19,
+          "value": "C"
+        },
+        {
+          "start": 1.19,
+          "end": 1.26,
+          "value": "B"
+        },
+        {
+          "start": 1.26,
+          "end": 1.34,
+          "value": "A"
+        },
+        {
+          "start": 1.34,
+          "end": 1.53,
+          "value": "B"
+        },
+        {
+          "start": 1.53,
+          "end": 1.74,
+          "value": "F"
+        },
+        {
+          "start": 1.74,
+          "end": 1.81,
+          "value": "B"
+        },
+        {
+          "start": 1.81,
+          "end": 1.88,
+          "value": "F"
+        },
+        {
+          "start": 1.88,
+          "end": 2.09,
+          "value": "C"
+        },
+        {
+          "start": 2.09,
+          "end": 2.23,
+          "value": "B"
+        },
+        {
+          "start": 2.23,
+          "end": 2.27,
+          "value": "X"
+        }
+      ]
+    },
+    {
+      "beat": "setup",
+      "speaker": "Walter",
+      "line": "Three GPUs? That’s a lot of horsepower for a…?",
+      "source": "Kokoro am_michael",
+      "start_sample": 114624,
+      "end_sample": 195961,
+      "start_seconds": 4.776,
+      "end_seconds": 8.165,
+      "mouth_cues": [
+        {
+          "start": 0.0,
+          "end": 0.05,
+          "value": "X"
+        },
+        {
+          "start": 0.05,
+          "end": 0.5,
+          "value": "B"
+        },
+        {
+          "start": 0.5,
+          "end": 0.58,
+          "value": "A"
+        },
+        {
+          "start": 0.58,
+          "end": 0.82,
+          "value": "B"
+        },
+        {
+          "start": 0.82,
+          "end": 1.13,
+          "value": "F"
+        },
+        {
+          "start": 1.13,
+          "end": 1.17,
+          "value": "C"
+        },
+        {
+          "start": 1.17,
+          "end": 1.28,
+          "value": "B"
+        },
+        {
+          "start": 1.28,
+          "end": 1.62,
+          "value": "X"
+        },
+        {
+          "start": 1.62,
+          "end": 1.91,
+          "value": "B"
+        },
+        {
+          "start": 1.91,
+          "end": 1.98,
+          "value": "C"
+        },
+        {
+          "start": 1.98,
+          "end": 2.05,
+          "value": "H"
+        },
+        {
+          "start": 2.05,
+          "end": 2.12,
+          "value": "B"
+        },
+        {
+          "start": 2.12,
+          "end": 2.19,
+          "value": "G"
+        },
+        {
+          "start": 2.19,
+          "end": 2.4,
+          "value": "E"
+        },
+        {
+          "start": 2.4,
+          "end": 2.48,
+          "value": "A"
+        },
+        {
+          "start": 2.48,
+          "end": 2.69,
+          "value": "C"
+        },
+        {
+          "start": 2.69,
+          "end": 2.83,
+          "value": "E"
+        },
+        {
+          "start": 2.83,
+          "end": 2.9,
+          "value": "G"
+        },
+        {
+          "start": 2.9,
+          "end": 2.97,
+          "value": "E"
+        },
+        {
+          "start": 2.97,
+          "end": 3.04,
+          "value": "B"
+        },
+        {
+          "start": 3.04,
+          "end": 3.25,
+          "value": "C"
+        },
+        {
+          "start": 3.25,
+          "end": 3.38,
+          "value": "X"
+        }
+      ]
+    },
+    {
+      "beat": "setup",
+      "speaker": "Kyle",
+      "line": "For whatever you’re building, it’s the future today.",
+      "source": "Kokoro am_fenrir",
+      "start_sample": 203641,
+      "end_sample": 259387,
+      "start_seconds": 8.485,
+      "end_seconds": 10.808,
+      "mouth_cues": [
+        {
+          "start": 0.0,
+          "end": 0.03,
+          "value": "X"
+        },
+        {
+          "start": 0.03,
+          "end": 0.1,
+          "value": "B"
+        },
+        {
+          "start": 0.1,
+          "end": 0.16,
+          "value": "F"
+        },
+        {
+          "start": 0.16,
+          "end": 0.23,
+          "value": "B"
+        },
+        {
+          "start": 0.23,
+          "end": 0.37,
+          "value": "C"
+        },
+        {
+          "start": 0.37,
+          "end": 0.44,
+          "value": "G"
+        },
+        {
+          "start": 0.44,
+          "end": 0.51,
+          "value": "F"
+        },
+        {
+          "start": 0.51,
+          "end": 0.59,
+          "value": "A"
+        },
+        {
+          "start": 0.59,
+          "end": 0.79,
+          "value": "B"
+        },
+        {
+          "start": 0.79,
+          "end": 1.14,
+          "value": "C"
+        },
+        {
+          "start": 1.14,
+          "end": 1.35,
+          "value": "B"
+        },
+        {
+          "start": 1.35,
+          "end": 1.42,
+          "value": "C"
+        },
+        {
+          "start": 1.42,
+          "end": 1.56,
+          "value": "G"
+        },
+        {
+          "start": 1.56,
+          "end": 1.63,
+          "value": "F"
+        },
+        {
+          "start": 1.63,
+          "end": 1.98,
+          "value": "B"
+        },
+        {
+          "start": 1.98,
+          "end": 2.19,
+          "value": "C"
+        },
+        {
+          "start": 2.19,
+          "end": 2.26,
+          "value": "B"
+        },
+        {
+          "start": 2.26,
+          "end": 2.32,
+          "value": "X"
+        }
+      ]
+    },
+    {
+      "beat": "setup",
+      "action": "Walter studies the machine",
+      "start_sample": 259387,
+      "end_sample": 318857,
+      "start_seconds": 10.808,
+      "end_seconds": 13.286
+    },
+    {
+      "beat": "escalation",
+      "action": "Walter discovers the cat gallery",
+      "start_sample": 318857,
+      "end_sample": 380727,
+      "start_seconds": 13.286,
+      "end_seconds": 15.864
+    },
+    {
+      "beat": "escalation",
+      "speaker": "Walter",
+      "line": "Five thousand dollars. For cats?",
+      "source": "Approved Walter keynote take",
+      "start_sample": 380727,
+      "end_sample": 463198,
+      "start_seconds": 15.864,
+      "end_seconds": 19.3,
+      "mouth_cues": [
+        {
+          "start": 0.0,
+          "end": 0.16,
+          "value": "X"
+        },
+        {
+          "start": 0.16,
+          "end": 0.29,
+          "value": "G"
+        },
+        {
+          "start": 0.29,
+          "end": 0.43,
+          "value": "C"
+        },
+        {
+          "start": 0.43,
+          "end": 0.5,
+          "value": "B"
+        },
+        {
+          "start": 0.5,
+          "end": 0.57,
+          "value": "G"
+        },
+        {
+          "start": 0.57,
+          "end": 0.64,
+          "value": "B"
+        },
+        {
+          "start": 0.64,
+          "end": 0.71,
+          "value": "C"
+        },
+        {
+          "start": 0.71,
+          "end": 0.78,
+          "value": "E"
+        },
+        {
+          "start": 0.78,
+          "end": 1.06,
+          "value": "B"
+        },
+        {
+          "start": 1.06,
+          "end": 1.48,
+          "value": "E"
+        },
+        {
+          "start": 1.48,
+          "end": 1.62,
+          "value": "B"
+        },
+        {
+          "start": 1.62,
+          "end": 2.37,
+          "value": "X"
+        },
+        {
+          "start": 2.37,
+          "end": 2.47,
+          "value": "G"
+        },
+        {
+          "start": 2.47,
+          "end": 2.54,
+          "value": "E"
+        },
+        {
+          "start": 2.54,
+          "end": 2.82,
+          "value": "C"
+        },
+        {
+          "start": 2.82,
+          "end": 3.17,
+          "value": "B"
+        },
+        {
+          "start": 3.17,
+          "end": 3.43,
+          "value": "X"
+        }
+      ]
+    },
+    {
+      "beat": "escalation",
+      "speaker": "Kyle",
+      "line": "Synthetic feline content, Walter.",
+      "source": "Kyle’s line from the approved pilot",
+      "start_sample": 470878,
+      "end_sample": 521038,
+      "start_seconds": 19.62,
+      "end_seconds": 21.71,
+      "mouth_cues": [
+        {
+          "start": 0.0,
+          "end": 0.12,
+          "value": "X"
+        },
+        {
+          "start": 0.12,
+          "end": 0.58,
+          "value": "B"
+        },
+        {
+          "start": 0.58,
+          "end": 0.65,
+          "value": "G"
+        },
+        {
+          "start": 0.65,
+          "end": 0.72,
+          "value": "B"
+        },
+        {
+          "start": 0.72,
+          "end": 0.79,
+          "value": "H"
+        },
+        {
+          "start": 0.79,
+          "end": 0.86,
+          "value": "B"
+        },
+        {
+          "start": 0.86,
+          "end": 0.93,
+          "value": "C"
+        },
+        {
+          "start": 0.93,
+          "end": 1.14,
+          "value": "D"
+        },
+        {
+          "start": 1.14,
+          "end": 1.21,
+          "value": "B"
+        },
+        {
+          "start": 1.21,
+          "end": 1.35,
+          "value": "C"
+        },
+        {
+          "start": 1.35,
+          "end": 1.42,
+          "value": "B"
+        },
+        {
+          "start": 1.42,
+          "end": 1.49,
+          "value": "F"
+        },
+        {
+          "start": 1.49,
+          "end": 1.91,
+          "value": "E"
+        },
+        {
+          "start": 1.91,
+          "end": 2.09,
+          "value": "X"
+        }
+      ]
+    },
+    {
+      "beat": "escalation",
+      "speaker": "Walter",
+      "line": "They're cats, Kyle.",
+      "source": "Kokoro am_michael",
+      "start_sample": 528718,
+      "end_sample": 557511,
+      "start_seconds": 22.03,
+      "end_seconds": 23.23,
+      "mouth_cues": [
+        {
+          "start": 0.0,
+          "end": 0.04,
+          "value": "X"
+        },
+        {
+          "start": 0.04,
+          "end": 0.1,
+          "value": "B"
+        },
+        {
+          "start": 0.1,
+          "end": 0.37,
+          "value": "C"
+        },
+        {
+          "start": 0.37,
+          "end": 0.51,
+          "value": "B"
+        },
+        {
+          "start": 0.51,
+          "end": 0.58,
+          "value": "C"
+        },
+        {
+          "start": 0.58,
+          "end": 0.86,
+          "value": "D"
+        },
+        {
+          "start": 0.86,
+          "end": 0.93,
+          "value": "B"
+        },
+        {
+          "start": 0.93,
+          "end": 1.14,
+          "value": "H"
+        },
+        {
+          "start": 1.14,
+          "end": 1.19,
+          "value": "X"
+        }
+      ]
+    },
+    {
+      "beat": "escalation",
+      "speaker": "Kyle",
+      "line": "We’re not just making cats, we’re creating a catverse.",
+      "source": "Kokoro am_fenrir",
+      "start_sample": 565191,
+      "end_sample": 625554,
+      "start_seconds": 23.55,
+      "end_seconds": 26.065,
+      "mouth_cues": [
+        {
+          "start": 0.0,
+          "end": 0.04,
+          "value": "X"
+        },
+        {
+          "start": 0.04,
+          "end": 0.08,
+          "value": "F"
+        },
+        {
+          "start": 0.08,
+          "end": 0.12,
+          "value": "B"
+        },
+        {
+          "start": 0.12,
+          "end": 0.19,
+          "value": "D"
+        },
+        {
+          "start": 0.19,
+          "end": 0.47,
+          "value": "B"
+        },
+        {
+          "start": 0.47,
+          "end": 0.55,
+          "value": "A"
+        },
+        {
+          "start": 0.55,
+          "end": 0.59,
+          "value": "C"
+        },
+        {
+          "start": 0.59,
+          "end": 0.7,
+          "value": "B"
+        },
+        {
+          "start": 0.7,
+          "end": 0.98,
+          "value": "C"
+        },
+        {
+          "start": 0.98,
+          "end": 1.26,
+          "value": "B"
+        },
+        {
+          "start": 1.26,
+          "end": 1.33,
+          "value": "F"
+        },
+        {
+          "start": 1.33,
+          "end": 1.75,
+          "value": "B"
+        },
+        {
+          "start": 1.75,
+          "end": 2.03,
+          "value": "C"
+        },
+        {
+          "start": 2.03,
+          "end": 2.1,
+          "value": "B"
+        },
+        {
+          "start": 2.1,
+          "end": 2.17,
+          "value": "G"
+        },
+        {
+          "start": 2.17,
+          "end": 2.31,
+          "value": "E"
+        },
+        {
+          "start": 2.31,
+          "end": 2.45,
+          "value": "B"
+        },
+        {
+          "start": 2.45,
+          "end": 2.51,
+          "value": "X"
+        }
+      ]
+    },
+    {
+      "beat": "escalation",
+      "speaker": "Walter",
+      "line": "A catverse? That’s just an endless stream of cat memes.",
+      "source": "Kokoro am_michael",
+      "start_sample": 633234,
+      "end_sample": 723708,
+      "start_seconds": 26.385,
+      "end_seconds": 30.154,
+      "mouth_cues": [
+        {
+          "start": 0.0,
+          "end": 0.03,
+          "value": "X"
+        },
+        {
+          "start": 0.03,
+          "end": 0.31,
+          "value": "C"
+        },
+        {
+          "start": 0.31,
+          "end": 0.38,
+          "value": "B"
+        },
+        {
+          "start": 0.38,
+          "end": 0.52,
+          "value": "G"
+        },
+        {
+          "start": 0.52,
+          "end": 0.66,
+          "value": "E"
+        },
+        {
+          "start": 0.66,
+          "end": 0.8,
+          "value": "B"
+        },
+        {
+          "start": 0.8,
+          "end": 1.18,
+          "value": "X"
+        },
+        {
+          "start": 1.18,
+          "end": 1.23,
+          "value": "B"
+        },
+        {
+          "start": 1.23,
+          "end": 1.28,
+          "value": "C"
+        },
+        {
+          "start": 1.28,
+          "end": 1.7,
+          "value": "B"
+        },
+        {
+          "start": 1.7,
+          "end": 2.05,
+          "value": "C"
+        },
+        {
+          "start": 2.05,
+          "end": 2.12,
+          "value": "B"
+        },
+        {
+          "start": 2.12,
+          "end": 2.19,
+          "value": "H"
+        },
+        {
+          "start": 2.19,
+          "end": 2.26,
+          "value": "C"
+        },
+        {
+          "start": 2.26,
+          "end": 2.61,
+          "value": "B"
+        },
+        {
+          "start": 2.61,
+          "end": 2.69,
+          "value": "A"
+        },
+        {
+          "start": 2.69,
+          "end": 2.75,
+          "value": "B"
+        },
+        {
+          "start": 2.75,
+          "end": 3.02,
+          "value": "C"
+        },
+        {
+          "start": 3.02,
+          "end": 3.16,
+          "value": "B"
+        },
+        {
+          "start": 3.16,
+          "end": 3.24,
+          "value": "A"
+        },
+        {
+          "start": 3.24,
+          "end": 3.71,
+          "value": "B"
+        },
+        {
+          "start": 3.71,
+          "end": 3.76,
+          "value": "X"
+        }
+      ]
+    },
+    {
+      "beat": "escalation",
+      "action": "Walter lets Kyle’s pitch hang",
+      "start_sample": 723708,
+      "end_sample": 775978,
+      "start_seconds": 30.154,
+      "end_seconds": 32.332
+    },
+    {
+      "beat": "punchline",
+      "action": "Susan brings up the spreadsheet",
+      "start_sample": 775978,
+      "end_sample": 830648,
+      "start_seconds": 32.332,
+      "end_seconds": 34.61
+    },
+    {
+      "beat": "punchline",
+      "speaker": "Susan",
+      "line": "The cat account is our only source of revenue.",
+      "source": "Approved Susan Marlo take",
+      "start_sample": 830648,
+      "end_sample": 908110,
+      "start_seconds": 34.61,
+      "end_seconds": 37.838,
+      "mouth_cues": [
+        {
+          "start": 0.0,
+          "end": 0.26,
+          "value": "C"
+        },
+        {
+          "start": 0.26,
+          "end": 0.33,
+          "value": "B"
+        },
+        {
+          "start": 0.33,
+          "end": 0.75,
+          "value": "C"
+        },
+        {
+          "start": 0.75,
+          "end": 0.89,
+          "value": "E"
+        },
+        {
+          "start": 0.89,
+          "end": 1.33,
+          "value": "B"
+        },
+        {
+          "start": 1.33,
+          "end": 1.47,
+          "value": "C"
+        },
+        {
+          "start": 1.47,
+          "end": 1.54,
+          "value": "H"
+        },
+        {
+          "start": 1.54,
+          "end": 1.68,
+          "value": "C"
+        },
+        {
+          "start": 1.68,
+          "end": 2.1,
+          "value": "B"
+        },
+        {
+          "start": 2.1,
+          "end": 2.24,
+          "value": "F"
+        },
+        {
+          "start": 2.24,
+          "end": 2.45,
+          "value": "B"
+        },
+        {
+          "start": 2.45,
+          "end": 2.52,
+          "value": "G"
+        },
+        {
+          "start": 2.52,
+          "end": 3.15,
+          "value": "B"
+        },
+        {
+          "start": 3.15,
+          "end": 3.22,
+          "value": "X"
+        }
+      ]
+    },
+    {
+      "beat": "punchline",
+      "action": "Kyle perks up and Walter absorbs the reveal",
+      "start_sample": 908110,
+      "end_sample": 961579,
+      "start_seconds": 37.838,
+      "end_seconds": 40.066
+    },
+    {
+      "beat": "punchline",
+      "speaker": "Kyle",
+      "line": "So we’re basically cat‑powered, revenue‑driven, feline‑centric everywhere today.",
+      "source": "Kokoro am_fenrir",
+      "start_sample": 961579,
+      "end_sample": 1067522,
+      "start_seconds": 40.066,
+      "end_seconds": 44.48,
+      "mouth_cues": [
+        {
+          "start": 0.0,
+          "end": 0.04,
+          "value": "X"
+        },
+        {
+          "start": 0.04,
+          "end": 0.11,
+          "value": "B"
+        },
+        {
+          "start": 0.11,
+          "end": 0.17,
+          "value": "F"
+        },
+        {
+          "start": 0.17,
+          "end": 0.25,
+          "value": "A"
+        },
+        {
+          "start": 0.25,
+          "end": 0.4,
+          "value": "C"
+        },
+        {
+          "start": 0.4,
+          "end": 0.68,
+          "value": "B"
+        },
+        {
+          "start": 0.68,
+          "end": 0.89,
+          "value": "C"
+        },
+        {
+          "start": 0.89,
+          "end": 0.96,
+          "value": "B"
+        },
+        {
+          "start": 0.96,
+          "end": 1.04,
+          "value": "A"
+        },
+        {
+          "start": 1.04,
+          "end": 1.3,
+          "value": "C"
+        },
+        {
+          "start": 1.3,
+          "end": 1.44,
+          "value": "E"
+        },
+        {
+          "start": 1.44,
+          "end": 1.83,
+          "value": "B"
+        },
+        {
+          "start": 1.83,
+          "end": 1.9,
+          "value": "C"
+        },
+        {
+          "start": 1.9,
+          "end": 1.97,
+          "value": "G"
+        },
+        {
+          "start": 1.97,
+          "end": 2.18,
+          "value": "F"
+        },
+        {
+          "start": 2.18,
+          "end": 2.39,
+          "value": "B"
+        },
+        {
+          "start": 2.39,
+          "end": 2.46,
+          "value": "G"
+        },
+        {
+          "start": 2.46,
+          "end": 2.67,
+          "value": "C"
+        },
+        {
+          "start": 2.67,
+          "end": 2.81,
+          "value": "G"
+        },
+        {
+          "start": 2.81,
+          "end": 2.88,
+          "value": "B"
+        },
+        {
+          "start": 2.88,
+          "end": 2.95,
+          "value": "H"
+        },
+        {
+          "start": 2.95,
+          "end": 3.16,
+          "value": "B"
+        },
+        {
+          "start": 3.16,
+          "end": 3.23,
+          "value": "C"
+        },
+        {
+          "start": 3.23,
+          "end": 3.37,
+          "value": "B"
+        },
+        {
+          "start": 3.37,
+          "end": 3.65,
+          "value": "C"
+        },
+        {
+          "start": 3.65,
+          "end": 3.72,
+          "value": "G"
+        },
+        {
+          "start": 3.72,
+          "end": 3.79,
+          "value": "B"
+        },
+        {
+          "start": 3.79,
+          "end": 3.86,
+          "value": "F"
+        },
+        {
+          "start": 3.86,
+          "end": 3.93,
+          "value": "C"
+        },
+        {
+          "start": 3.93,
+          "end": 4.07,
+          "value": "B"
+        },
+        {
+          "start": 4.07,
+          "end": 4.28,
+          "value": "C"
+        },
+        {
+          "start": 4.28,
+          "end": 4.35,
+          "value": "B"
+        },
+        {
+          "start": 4.35,
+          "end": 4.41,
+          "value": "X"
+        }
+      ]
+    },
+    {
+      "beat": "punchline",
+      "speaker": "Walter",
+      "line": "Fine, but only if the cat pictures stop flooding the inbox.",
+      "source": "Kokoro am_michael",
+      "start_sample": 1075202,
+      "end_sample": 1162325,
+      "start_seconds": 44.8,
+      "end_seconds": 48.43,
+      "mouth_cues": [
+        {
+          "start": 0.0,
+          "end": 0.05,
+          "value": "X"
+        },
+        {
+          "start": 0.05,
+          "end": 0.17,
+          "value": "G"
+        },
+        {
+          "start": 0.17,
+          "end": 0.31,
+          "value": "D"
+        },
+        {
+          "start": 0.31,
+          "end": 0.6,
+          "value": "B"
+        },
+        {
+          "start": 0.6,
+          "end": 0.71,
+          "value": "A"
+        },
+        {
+          "start": 0.71,
+          "end": 0.76,
+          "value": "B"
+        },
+        {
+          "start": 0.76,
+          "end": 0.87,
+          "value": "E"
+        },
+        {
+          "start": 0.87,
+          "end": 1.15,
+          "value": "B"
+        },
+        {
+          "start": 1.15,
+          "end": 1.22,
+          "value": "G"
+        },
+        {
+          "start": 1.22,
+          "end": 1.29,
+          "value": "B"
+        },
+        {
+          "start": 1.29,
+          "end": 1.5,
+          "value": "C"
+        },
+        {
+          "start": 1.5,
+          "end": 1.57,
+          "value": "B"
+        },
+        {
+          "start": 1.57,
+          "end": 1.65,
+          "value": "A"
+        },
+        {
+          "start": 1.65,
+          "end": 1.93,
+          "value": "B"
+        },
+        {
+          "start": 1.93,
+          "end": 2.0,
+          "value": "E"
+        },
+        {
+          "start": 2.0,
+          "end": 2.14,
+          "value": "B"
+        },
+        {
+          "start": 2.14,
+          "end": 2.24,
+          "value": "D"
+        },
+        {
+          "start": 2.24,
+          "end": 2.28,
+          "value": "C"
+        },
+        {
+          "start": 2.28,
+          "end": 2.4,
+          "value": "A"
+        },
+        {
+          "start": 2.4,
+          "end": 2.48,
+          "value": "G"
+        },
+        {
+          "start": 2.48,
+          "end": 3.04,
+          "value": "B"
+        },
+        {
+          "start": 3.04,
+          "end": 3.12,
+          "value": "A"
+        },
+        {
+          "start": 3.12,
+          "end": 3.27,
+          "value": "D"
+        },
+        {
+          "start": 3.27,
+          "end": 3.31,
+          "value": "C"
+        },
+        {
+          "start": 3.31,
+          "end": 3.57,
+          "value": "B"
+        },
+        {
+          "start": 3.57,
+          "end": 3.63,
+          "value": "X"
+        }
+      ]
+    },
+    {
+      "beat": "punchline",
+      "action": "Walter processes the numbers",
+      "start_sample": 1162325,
+      "end_sample": 1219394,
+      "start_seconds": 48.43,
+      "end_seconds": 50.808
+    },
+    {
+      "beat": "outro",
+      "action": "Walter finds the Generate button",
+      "start_sample": 1219394,
+      "end_sample": 1266863,
+      "start_seconds": 50.808,
+      "end_seconds": 52.786
+    },
+    {
+      "beat": "outro",
+      "speaker": "Walter",
+      "line": "Alright, let’s generate a kitten; maybe it’s more… adorable.",
+      "source": "Kokoro am_michael",
+      "start_sample": 1266863,
+      "end_sample": 1354131,
+      "start_seconds": 52.786,
+      "end_seconds": 56.422,
+      "mouth_cues": [
+        {
+          "start": 0.0,
+          "end": 0.03,
+          "value": "X"
+        },
+        {
+          "start": 0.03,
+          "end": 0.18,
+          "value": "E"
+        },
+        {
+          "start": 0.18,
+          "end": 0.25,
+          "value": "B"
+        },
+        {
+          "start": 0.25,
+          "end": 0.32,
+          "value": "C"
+        },
+        {
+          "start": 0.32,
+          "end": 0.81,
+          "value": "B"
+        },
+        {
+          "start": 0.81,
+          "end": 0.95,
+          "value": "C"
+        },
+        {
+          "start": 0.95,
+          "end": 1.02,
+          "value": "E"
+        },
+        {
+          "start": 1.02,
+          "end": 1.96,
+          "value": "B"
+        },
+        {
+          "start": 1.96,
+          "end": 2.04,
+          "value": "A"
+        },
+        {
+          "start": 2.04,
+          "end": 2.11,
+          "value": "C"
+        },
+        {
+          "start": 2.11,
+          "end": 2.18,
+          "value": "A"
+        },
+        {
+          "start": 2.18,
+          "end": 2.51,
+          "value": "B"
+        },
+        {
+          "start": 2.51,
+          "end": 2.62,
+          "value": "A"
+        },
+        {
+          "start": 2.62,
+          "end": 2.79,
+          "value": "E"
+        },
+        {
+          "start": 2.79,
+          "end": 2.86,
+          "value": "B"
+        },
+        {
+          "start": 2.86,
+          "end": 2.93,
+          "value": "C"
+        },
+        {
+          "start": 2.93,
+          "end": 3.28,
+          "value": "E"
+        },
+        {
+          "start": 3.28,
+          "end": 3.35,
+          "value": "B"
+        },
+        {
+          "start": 3.35,
+          "end": 3.43,
+          "value": "A"
+        },
+        {
+          "start": 3.43,
+          "end": 3.57,
+          "value": "B"
+        },
+        {
+          "start": 3.57,
+          "end": 3.63,
+          "value": "X"
+        }
+      ]
+    },
+    {
+      "beat": "outro",
+      "action": "The fans spin up over the kitten result",
+      "start_sample": 1354131,
+      "end_sample": 1440000,
+      "start_seconds": 56.422,
+      "end_seconds": 60.0
+    }
+  ]
+}

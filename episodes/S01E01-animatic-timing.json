@@ -1,0 +1,200 @@
+{
+  "episode": "S01E01",
+  "sample_rate": 24000,
+  "audio_file": "S01E01-animatic-audio.wav",
+  "duration_seconds": 60.0,
+  "timeline": [
+    {
+      "beat": "setup",
+      "action": "Kyle unveils the workstation",
+      "start_sample": 0,
+      "end_sample": 52270,
+      "start_seconds": 0.0,
+      "end_seconds": 2.178
+    },
+    {
+      "beat": "setup",
+      "speaker": "Kyle",
+      "line": "Look, this beast runs three GPUs at once!",
+      "source": "Kokoro am_fenrir",
+      "start_sample": 52270,
+      "end_sample": 106944,
+      "start_seconds": 2.178,
+      "end_seconds": 4.456
+    },
+    {
+      "beat": "setup",
+      "speaker": "Walter",
+      "line": "Three GPUs? That’s a lot of horsepower for a…?",
+      "source": "Kokoro am_michael",
+      "start_sample": 114624,
+      "end_sample": 195961,
+      "start_seconds": 4.776,
+      "end_seconds": 8.165
+    },
+    {
+      "beat": "setup",
+      "speaker": "Kyle",
+      "line": "For whatever you’re building, it’s the future today.",
+      "source": "Kokoro am_fenrir",
+      "start_sample": 203641,
+      "end_sample": 259387,
+      "start_seconds": 8.485,
+      "end_seconds": 10.808
+    },
+    {
+      "beat": "setup",
+      "action": "Walter studies the machine",
+      "start_sample": 259387,
+      "end_sample": 318857,
+      "start_seconds": 10.808,
+      "end_seconds": 13.286
+    },
+    {
+      "beat": "escalation",
+      "action": "Walter discovers the cat gallery",
+      "start_sample": 318857,
+      "end_sample": 380727,
+      "start_seconds": 13.286,
+      "end_seconds": 15.864
+    },
+    {
+      "beat": "escalation",
+      "speaker": "Walter",
+      "line": "Five thousand dollars. For cats?",
+      "source": "Approved Walter keynote take",
+      "start_sample": 380727,
+      "end_sample": 463198,
+      "start_seconds": 15.864,
+      "end_seconds": 19.3
+    },
+    {
+      "beat": "escalation",
+      "speaker": "Kyle",
+      "line": "Synthetic feline content, Walter.",
+      "source": "Kyle’s line from the approved pilot",
+      "start_sample": 470878,
+      "end_sample": 521038,
+      "start_seconds": 19.62,
+      "end_seconds": 21.71
+    },
+    {
+      "beat": "escalation",
+      "speaker": "Walter",
+      "line": "They're cats, Kyle.",
+      "source": "Kokoro am_michael",
+      "start_sample": 528718,
+      "end_sample": 557511,
+      "start_seconds": 22.03,
+      "end_seconds": 23.23
+    },
+    {
+      "beat": "escalation",
+      "speaker": "Kyle",
+      "line": "We’re not just making cats, we’re creating a catverse.",
+      "source": "Kokoro am_fenrir",
+      "start_sample": 565191,
+      "end_sample": 625554,
+      "start_seconds": 23.55,
+      "end_seconds": 26.065
+    },
+    {
+      "beat": "escalation",
+      "speaker": "Walter",
+      "line": "A catverse? That’s just an endless stream of cat memes.",
+      "source": "Kokoro am_michael",
+      "start_sample": 633234,
+      "end_sample": 723708,
+      "start_seconds": 26.385,
+      "end_seconds": 30.154
+    },
+    {
+      "beat": "escalation",
+      "action": "Walter lets Kyle’s pitch hang",
+      "start_sample": 723708,
+      "end_sample": 775978,
+      "start_seconds": 30.154,
+      "end_seconds": 32.332
+    },
+    {
+      "beat": "punchline",
+      "action": "Susan brings up the spreadsheet",
+      "start_sample": 775978,
+      "end_sample": 830648,
+      "start_seconds": 32.332,
+      "end_seconds": 34.61
+    },
+    {
+      "beat": "punchline",
+      "speaker": "Susan",
+      "line": "The cat account is our only source of revenue.",
+      "source": "Approved Susan Marlo take",
+      "start_sample": 830648,
+      "end_sample": 908110,
+      "start_seconds": 34.61,
+      "end_seconds": 37.838
+    },
+    {
+      "beat": "punchline",
+      "action": "Kyle perks up and Walter absorbs the reveal",
+      "start_sample": 908110,
+      "end_sample": 961579,
+      "start_seconds": 37.838,
+      "end_seconds": 40.066
+    },
+    {
+      "beat": "punchline",
+      "speaker": "Kyle",
+      "line": "So we’re basically cat‑powered, revenue‑driven, feline‑centric everywhere today.",
+      "source": "Kokoro am_fenrir",
+      "start_sample": 961579,
+      "end_sample": 1067522,
+      "start_seconds": 40.066,
+      "end_seconds": 44.48
+    },
+    {
+      "beat": "punchline",
+      "speaker": "Walter",
+      "line": "Fine, but only if the cat pictures stop flooding the inbox.",
+      "source": "Kokoro am_michael",
+      "start_sample": 1075202,
+      "end_sample": 1162325,
+      "start_seconds": 44.8,
+      "end_seconds": 48.43
+    },
+    {
+      "beat": "punchline",
+      "action": "Walter processes the numbers",
+      "start_sample": 1162325,
+      "end_sample": 1219394,
+      "start_seconds": 48.43,
+      "end_seconds": 50.808
+    },
+    {
+      "beat": "outro",
+      "action": "Walter finds the Generate button",
+      "start_sample": 1219394,
+      "end_sample": 1266863,
+      "start_seconds": 50.808,
+      "end_seconds": 52.786
+    },
+    {
+      "beat": "outro",
+      "speaker": "Walter",
+      "line": "Alright, let’s generate a kitten; maybe it’s more… adorable.",
+      "source": "Kokoro am_michael",
+      "start_sample": 1266863,
+      "end_sample": 1354131,
+      "start_seconds": 52.786,
+      "end_seconds": 56.422
+    },
+    {
+      "beat": "outro",
+      "action": "The fans spin up over the kitten result",
+      "start_sample": 1354131,
+      "end_sample": 1440000,
+      "start_seconds": 56.422,
+      "end_seconds": 60.0
+    }
+  ]
+}

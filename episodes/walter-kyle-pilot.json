@@ -1,0 +1,27 @@
+{
+  "acting": {
+    "line_1_walter": "blink",
+    "line_1_kyle": "present",
+    "line_2_walter": "raise_brow",
+    "line_2_kyle": "present",
+    "line_3_walter": "arm_gesture",
+    "line_3_kyle": "blink"
+  },
+  "timing": [
+    {
+      "line": "Five thousand dollars. For cats?",
+      "speech_start": 0.39,
+      "speech_end": 3.88
+    },
+    {
+      "line": "Synthetic feline content, Walter.",
+      "speech_start": 4.56,
+      "speech_end": 6.35
+    },
+    {
+      "line": "They're cats, Kyle.",
+      "speech_start": 7.23,
+      "speech_end": 8.34
+    }
+  ]
+}

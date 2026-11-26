@@ -2,6 +2,7 @@ __pycache__/
 .venv/
 *.mp4
 *.wav
+*.performance.zip
 *.safetensors
 *.gguf
 .env

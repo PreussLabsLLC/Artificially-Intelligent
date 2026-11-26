@@ -1,0 +1,19 @@
+{
+  "character": "walter",
+  "set": "office",
+  "dialogue": "Five thousand dollars. For cats?",
+  "cues": [
+    {
+      "action": "raise_brow",
+      "anchor": "before_question"
+    },
+    {
+      "action": "blink",
+      "anchor": "on_question"
+    },
+    {
+      "action": "hold_stare",
+      "anchor": "after_line"
+    }
+  ]
+}

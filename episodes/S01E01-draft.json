@@ -1,0 +1,89 @@
+{
+  "episode": "S01E01",
+  "title": "Return on Investment",
+  "status": "draft",
+  "minimum_seconds": 60,
+  "spoken_words": 96,
+  "scenes": [
+    {
+      "beat": "setup",
+      "reference_seconds": 15,
+      "set": "office",
+      "action": "Kyle proudly unveils the new AI supercomputer, waving a whiteboard.",
+      "dialogue": [
+        {
+          "speaker": "Kyle",
+          "line": "Look, this beast runs three GPUs at once!"
+        },
+        {
+          "speaker": "Walter",
+          "line": "Three GPUs? That’s a lot of horsepower for a…?"
+        },
+        {
+          "speaker": "Kyle",
+          "line": "For whatever you’re building, it’s the future today."
+        }
+      ]
+    },
+    {
+      "beat": "escalation",
+      "reference_seconds": 25,
+      "set": "office",
+      "action": "Kyle flicks a switch; a fan whirs loudly, screens fill with images.",
+      "dialogue": [
+        {
+          "speaker": "Walter",
+          "line": "Five thousand dollars. For cats?"
+        },
+        {
+          "speaker": "Kyle",
+          "line": "Synthetic feline content, Walter."
+        },
+        {
+          "speaker": "Walter",
+          "line": "They're cats, Kyle."
+        },
+        {
+          "speaker": "Kyle",
+          "line": "We’re not just making cats, we’re creating a catverse."
+        },
+        {
+          "speaker": "Walter",
+          "line": "A catverse? That’s just an endless stream of cat memes."
+        }
+      ]
+    },
+    {
+      "beat": "punchline",
+      "reference_seconds": 15,
+      "set": "office",
+      "action": "Susan pulls up a spreadsheet; numbers glow like cat eyes.",
+      "dialogue": [
+        {
+          "speaker": "Susan",
+          "line": "The cat account is our only source of revenue."
+        },
+        {
+          "speaker": "Kyle",
+          "line": "So we’re basically cat‑powered, revenue‑driven, feline‑centric everywhere today."
+        },
+        {
+          "speaker": "Walter",
+          "line": "Fine, but only if the cat pictures stop flooding the inbox."
+        }
+      ]
+    },
+    {
+      "beat": "outro",
+      "reference_seconds": 5,
+      "set": "office",
+      "action": "Walter stares at the screen, reluctantly clicking the 'Generate' button.",
+      "dialogue": [
+        {
+          "speaker": "Walter",
+          "line": "Alright, let’s generate a kitten; maybe it’s more… adorable."
+        }
+      ]
+    }
+  ]
+}

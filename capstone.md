@@ -2,7 +2,7 @@
 
 ## Objective
 
-Build a predominantly local, automated animation studio that produces approximately 60-second comedy episodes from a short premise, with consistent original characters, LLM-generated storylines, dialogue, lip-sync, background music and sound effects. The visual inspiration is South Park's limited 2D paper-cutout animation, with an original cast and visual identity.
+Build a predominantly local, automated animation studio that produces comedy episodes of at least 60 seconds from a short premise, with consistent original characters, LLM-generated storylines, dialogue, lip-sync, background music and sound effects. Let episodes run longer when the pacing calls for it. The visual inspiration is South Park's limited 2D paper-cutout animation, with an original cast and visual identity.
 
 Use AI to generate assets and direct episodes, but conventional programmatic animation to preserve character consistency. Reserve generative video for special sequences.
 
