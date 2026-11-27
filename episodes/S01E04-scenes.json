@@ -1,0 +1,188 @@
+{
+  "episode": "S01E04",
+  "title": "The Cloud Has a Silver Invoice",
+  "minimum_seconds": 60,
+  "cards": {
+    "setup": [
+      "Walter’s Launch",
+      "Autonomous agent ready",
+      "Office"
+    ],
+    "escalation": [
+      "Agent Chaos",
+      "Hundreds of subagents",
+      "Cloud"
+    ],
+    "punchline": [
+      "Invoice Shock",
+      "$14,000 Cloud",
+      "Finance"
+    ],
+    "outro": [
+      "Final Fix",
+      "Semicolon typed",
+      "Done"
+    ]
+  },
+  "scenes": [
+    {
+      "set": "office",
+      "cast": {
+        "Walter": 245,
+        "Kyle": 515,
+        "Susan": 763
+      },
+      "card": "setup",
+      "lead_seconds": 1,
+      "tail_seconds": 1,
+      "dialogue": [
+        {
+          "speaker": "Walter",
+          "line": "Deploying the new AI coder. It’ll finish the semicolon tomorrow.",
+          "acting": {
+            "Walter": "gesture"
+          },
+          "de": "Ich starte den neuen KI-Coder. Er\nschließt den Semikolon morgen ab.",
+          "es": "Desplegando el nuevo codificador IA.\nTerminará el punto y coma mañana."
+        },
+        {
+          "speaker": "Kyle",
+          "line": "Great! I’ll celebrate with a fresh whiteboard doodle.",
+          "acting": {
+            "Kyle": "present"
+          },
+          "de": "Super! Ich feiere mit einem frischen\nWhiteboard-Zeichnung.",
+          "es": "¡Genial! Celebraré con un nuevo dibujo\nen la pizarra."
+        },
+        {
+          "speaker": "Susan",
+          "line": "Just make sure the budget stays in the green.",
+          "acting": {
+            "Susan": "present"
+          },
+          "de": "Stellen Sie sicher, dass das Budget im\ngrünen Bereich bleibt.",
+          "es": "Asegúrate de que el presupuesto quede en\nverde."
+        }
+      ]
+    },
+    {
+      "set": "office",
+      "cast": {
+        "Chip": 166,
+        "Walter": 369,
+        "Kyle": 563,
+        "Susan": 790
+      },
+      "card": "escalation",
+      "lead_seconds": 1,
+      "tail_seconds": 1,
+      "dialogue": [
+        {
+          "speaker": "Chip",
+          "line": "Initializing subagents…",
+          "acting": {
+            "Chip": "thinking"
+          },
+          "de": "Initialisierung von Unteragenten…",
+          "es": "Inicializando subagentes…"
+        },
+        {
+          "speaker": "Walter",
+          "line": "Did you just spawn a hundred of them?",
+          "acting": {
+            "Walter": "raise_brow"
+          },
+          "de": "Hast du gerade hundert davon gestartet?",
+          "es": "¿Acabas de crear cien de ellos?"
+        },
+        {
+          "speaker": "Kyle",
+          "line": "It’s a distributed search! Efficiency is key.",
+          "acting": {
+            "Kyle": "nod"
+          },
+          "de": "Es ist eine verteilte Suche! Effizienz\nist entscheidend.",
+          "es": "¡Es una búsqueda distribuida! La\neficiencia es clave."
+        },
+        {
+          "speaker": "Susan",
+          "line": "I’m recalculating the cloud bill now.",
+          "acting": {
+            "Susan": "present"
+          },
+          "de": "Ich berechne die Cloud-Rechnung neu.",
+          "es": "Estoy recalculando la factura de la\nnube."
+        },
+        {
+          "speaker": "Walter",
+          "line": "If it’s that many, the semicolon might be lost in translation.",
+          "acting": {
+            "Walter": "stare"
+          },
+          "de": "Wenn es so viele sind, könnte der\nSemikolon in der Übersetzung verloren\ngehen.",
+          "es": "Si son tantos, el punto y coma podría\nperderse en la traducción."
+        }
+      ]
+    },
+    {
+      "set": "office",
+      "cast": {
+        "Susan": 245,
+        "Kyle": 515,
+        "Walter": 763
+      },
+      "card": "punchline",
+      "lead_seconds": 1,
+      "tail_seconds": 1,
+      "dialogue": [
+        {
+          "speaker": "Susan",
+          "line": "Here’s the bill: $14,000. The semicolon is still missing.",
+          "acting": {
+            "Susan": "present"
+          },
+          "de": "Hier die Rechnung: 14.000 $. Der\nSemikolon fehlt immer noch.",
+          "es": "Aquí está la factura: $14,000. El punto\ny coma sigue faltando."
+        },
+        {
+          "speaker": "Kyle",
+          "line": "That’s a lot of cloud. Maybe we should buy a private server?",
+          "acting": {
+            "Kyle": "present"
+          },
+          "de": "Das ist viel Cloud. Vielleicht sollten\nwir einen privaten Server kaufen?",
+          "es": "Eso es mucho de la nube. ¿Quizás\ndeberíamos comprar un servidor privado?"
+        },
+        {
+          "speaker": "Walter",
+          "line": "I’ll just type the semicolon myself. No more surprises.",
+          "acting": {
+            "Walter": "gesture"
+          },
+          "de": "Ich tippe einfach den Semikolon selbst.\nKeine Überraschungen mehr.",
+          "es": "Simplemente escribiré el punto y coma yo\nmismo. No más sorpresas."
+        }
+      ]
+    },
+    {
+      "set": "office",
+      "cast": {
+        "Walter": 440
+      },
+      "card": "outro",
+      "lead_seconds": 1,
+      "tail_seconds": 1,
+      "dialogue": [
+        {
+          "speaker": "Walter",
+          "line": "There. The code is clean, the bill is gone, and the cloud is quiet.",
+          "acting": {
+            "Walter": "stare"
+          },
+          "de": "Da. Der Code ist sauber, die Rechnung\nist weg, und die Cloud ist still.",
+          "es": "Listo. El código está limpio, la factura\nse fue, y la nube está en silencio."
+        }
+      ]
+    }
+  ]
+}

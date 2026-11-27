@@ -1,0 +1,55 @@
+1
+00:00:02,741 --> 00:00:07,341
+Equipo, contratamos a un ingeniero de
+prompts: ¡hará que nuestra IA sea 10
+veces más rápida!
+
+2
+00:00:07,434 --> 00:00:11,677
+¿Cuál es el secreto, Kyle? He visto
+algoritmos, no magia.
+
+3
+00:00:12,027 --> 00:00:14,318
+Confía en el proceso. Él llega mañana.
+
+4
+00:00:20,191 --> 00:00:23,421
+Tengo el cuaderno del ingeniero. Veamos
+qué hay dentro.
+
+5
+00:00:23,811 --> 00:00:24,655
+Procesando…
+
+6
+00:00:25,015 --> 00:00:27,906
+Primera línea: ‘Por favor’. Segunda
+línea: ‘Por favor’.
+
+7
+00:00:28,256 --> 00:00:29,732
+Eso es… extrañamente específico.
+
+8
+00:00:29,816 --> 00:00:35,045
+He visto ‘por favor’ en contabilidad. Es
+cortés.
+
+9
+00:00:40,887 --> 00:00:44,187
+También escribe ‘piensa cuidadosamente’
+después de cada solicitud.
+
+10
+00:00:44,438 --> 00:00:46,729
+¿Entonces la IA solo obedece porque es
+educada?
+
+11
+00:00:46,813 --> 00:00:48,463
+Por favor… piensa cuidadosamente…
+
+12
+00:00:54,124 --> 00:00:56,939
+Terminamos su contrato, por favor.

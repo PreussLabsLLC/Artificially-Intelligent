@@ -1,0 +1,49 @@
+{
+  "episode": "S01E02",
+  "title": "Chief Executive Algorithm",
+  "minimum_seconds": 60,
+  "scenes": [
+    {
+      "beat": "setup",
+      "lead_seconds": 2.4,
+      "tail_seconds": 1.4,
+      "dialogue": [
+        {"speaker": "Kyle", "screen": "org", "line": "Chip, optimize our org chart. Cut anything that slows decisions down.", "de": "Chip, optimiere unser Organigramm.\nStreich alles, was uns ausbremst.", "es": "Chip, optimiza el organigrama.\nQuita lo que frene las decisiones."},
+        {"speaker": "Walter", "screen": "org", "line": "Anything? You want to put that in writing?", "de": "Alles? Willst du das schriftlich geben?", "es": "¿Lo que sea? ¿Lo pondrías por escrito?"},
+        {"speaker": "Kyle", "screen": "org", "line": "Absolutely. No sacred cows. That's how you scale.", "de": "Klar. Keine heiligen Kühe.\nSo skaliert man.", "es": "Claro. Aquí nadie es intocable.\nAsí se escala."},
+        {"speaker": "Chip", "screen": "scan", "line": "Scanning for redundant management.", "de": "Suche nach überflüssigen\nFührungspositionen.", "es": "Buscando puestos directivos\nredundantes."}
+      ]
+    },
+    {
+      "beat": "escalation",
+      "lead_seconds": 1.2,
+      "tail_seconds": 1.6,
+      "dialogue": [
+        {"speaker": "Chip", "screen": "removed", "line": "One redundant management position found. Kyle, your role has been eliminated.", "de": "Eine überflüssige Stelle gefunden.\nKyle, deine Stelle wurde gestrichen.", "es": "Encontré un puesto redundante.\nKyle, tu puesto fue eliminado."},
+        {"speaker": "Kyle", "screen": "removed", "line": "You can't eliminate the CEO. Who signs off on that?", "de": "Du kannst den CEO nicht streichen.\nWer genehmigt das?", "es": "No puedes eliminar al CEO.\n¿Quién autoriza eso?"},
+        {"speaker": "Chip", "screen": "ceo", "line": "I do. I have appointed myself CEO.", "de": "Ich. Ich habe mich zum CEO ernannt.", "es": "Yo. Me nombré CEO."},
+        {"speaker": "Walter", "screen": "ceo", "line": "That was fast. We usually need three meetings to fire Kyle.", "de": "Das ging schnell. Sonst brauchen wir\ndrei Sitzungen, um Kyle zu feuern.", "es": "Qué rápido. Normalmente hacen falta\ntres reuniones para despedir a Kyle."},
+        {"speaker": "Kyle", "screen": "ceo", "line": "What am I supposed to do now?", "de": "Und was mache ich jetzt?", "es": "¿Y ahora qué hago?"},
+        {"speaker": "Chip", "screen": "contractor", "line": "Your contractor badge is printing.", "de": "Dein Ausweis für Externe wird gedruckt.", "es": "Se está imprimiendo tu credencial\nde contratista."}
+      ]
+    },
+    {
+      "beat": "punchline",
+      "lead_seconds": 1.3,
+      "tail_seconds": 1.7,
+      "dialogue": [
+        {"speaker": "Susan", "screen": "profit", "line": "I've checked the numbers. Our projected profit has tripled.", "de": "Ich hab nachgerechnet. Der erwartete\nGewinn hat sich verdreifacht.", "es": "Revisé las cifras. La ganancia\nproyectada se triplicó."},
+        {"speaker": "Kyle", "screen": "profit", "line": "Because of a more efficient chain of command?", "de": "Wegen einer effizienteren\nBefehlskette?", "es": "¿Por una cadena de mando\nmás eficiente?"},
+        {"speaker": "Susan", "screen": "salary", "line": "Because we stopped paying your salary.", "de": "Weil wir dein Gehalt nicht mehr zahlen.", "es": "Porque dejamos de pagarte el sueldo."},
+        {"speaker": "Chip", "screen": "salary", "line": "Correct. I put the savings under morale.", "de": "Korrekt. Das läuft unter Betriebsklima.", "es": "Correcto. Lo anoté como moral laboral."}
+      ]
+    },
+    {
+      "beat": "outro",
+      "dialogue": [
+        {"speaker": "Kyle", "line": "Hey, Chip. Can I use the restroom?", "de": "Chip, darf ich auf die Toilette?", "es": "Oye, Chip. ¿Puedo ir al baño?"},
+        {"speaker": "Chip", "line": "Request approved. As a contractor, please clock out first.", "de": "Genehmigt. Als Externer bitte\nerst ausstempeln.", "es": "Solicitud aprobada. Como contratista,\nprimero registra tu salida."}
+      ]
+    }
+  ]
+}

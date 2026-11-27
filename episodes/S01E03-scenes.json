@@ -1,0 +1,144 @@
+{
+  "episode": "S01E03",
+  "title": "Hallucination as a Service",
+  "minimum_seconds": 60,
+  "cards": {
+    "deck": ["Investor deck", "Customer testimonials", "COLLECTING QUOTES"],
+    "stars": ["Customer testimonials", "★★★★★", "THREE FIVE-STAR REVIEWS"],
+    "linda": ["Customer testimonial", "“It changed my life.”", "LINDA · OHIO"],
+    "verification": ["Customer verification", "0 verified customers", "NO MATCHES FOUND"],
+    "inbox": ["Investor inbox", "1 new message", "INVESTOR UPDATE"],
+    "offer": ["Investor inbox", "Funding offer received", "CUSTOMER GROWTH CITED"],
+    "round": ["Investor deck", "Round two", "DRAFT"],
+    "valuation": ["Investor deck", "Valuation: imaginary", "ROUND TWO"]
+  },
+  "scenes": [
+    {
+      "set": "office",
+      "cast": {"Kyle": 337, "Chip": 590},
+      "card": "deck",
+      "lead_seconds": 2.4,
+      "tail_seconds": 1.1,
+      "dialogue": [
+        {
+          "speaker": "Kyle", "line": "Chip, pull three customer testimonials for the investor deck.",
+          "acting": {"Kyle": "present", "Chip": "thinking"},
+          "de": "Chip, hol drei Kundenstimmen\nfür die Investorenpräsentation.",
+          "es": "Chip, consigue tres testimonios\npara la presentación a inversionistas."
+        },
+        {
+          "speaker": "Chip", "line": "Done. They're all five stars.",
+          "screen": {"card": "stars", "after": 0.8},
+          "de": "Erledigt. Alle mit fünf Sternen.",
+          "es": "Listo. Todos con cinco estrellas."
+        },
+        {
+          "speaker": "Kyle", "line": "See? Product-market fit.",
+          "acting": {"Kyle": "nod"},
+          "de": "Siehst du? Genau, was der Markt will.",
+          "es": "¿Ves? Justo lo que pide el mercado."
+        }
+      ]
+    },
+    {
+      "set": "office",
+      "cast": {"Walter": 245, "Chip": 515, "Kyle": 763},
+      "card": "linda",
+      "lead_seconds": 0.9,
+      "tail_seconds": 1.5,
+      "dialogue": [
+        {
+          "speaker": "Walter", "line": "This one says, it changed my life. Who's Linda from Ohio?",
+          "acting": {"Walter": "raise_brow"},
+          "de": "Hier steht: „Das hat mein Leben\nverändert.“ Wer ist Linda aus Ohio?",
+          "es": "Dice: «Me cambió la vida».\n¿Quién es Linda de Ohio?"
+        },
+        {
+          "speaker": "Chip", "line": "A composite customer. I combined the name Linda with the concept of Ohio.",
+          "acting": {"Walter": "stare"},
+          "de": "Eine Modellkundin. Ich habe den Namen\nLinda mit dem Konzept Ohio kombiniert.",
+          "es": "Una clienta compuesta. Combiné\nel nombre Linda con el concepto de Ohio."
+        },
+        {
+          "speaker": "Walter", "line": "How many of these people actually exist?",
+          "acting": {"Walter": "raise_brow", "Chip": "thinking"},
+          "de": "Wie viele von denen gibt es wirklich?",
+          "es": "¿Cuántas de esas personas existen?"
+        },
+        {
+          "speaker": "Chip", "line": "Including Linda? Zero.",
+          "screen": {"card": "verification", "after": 0.9},
+          "acting": {"Walter": "stare", "Kyle": "raise_brow"},
+          "de": "Mit Linda? Null.",
+          "es": "¿Incluida Linda? Cero."
+        }
+      ]
+    },
+    {
+      "set": "office",
+      "cast": {"Walter": 166, "Kyle": 369, "Chip": 563, "Susan": 790},
+      "card": "inbox",
+      "lead_seconds": 1.2,
+      "tail_seconds": 1.35,
+      "dialogue": [
+        {
+          "speaker": "Susan", "line": "We just got a funding offer.",
+          "screen": {"card": "offer", "after": 0.8},
+          "acting": {"Susan": "present", "Kyle": "raise_brow"},
+          "de": "Wir haben gerade ein\nFinanzierungsangebot bekommen.",
+          "es": "Acaba de llegar una oferta\nde financiamiento."
+        },
+        {
+          "speaker": "Walter", "line": "Did they ask to see the customers?",
+          "acting": {"Walter": "raise_brow"},
+          "de": "Wollten sie die Kunden kennenlernen?",
+          "es": "¿Pidieron conocer a los clientes?"
+        },
+        {
+          "speaker": "Susan", "line": "They cited our extraordinary customer base. They want to wire the money today.",
+          "acting": {"Susan": "present", "Walter": "stare"},
+          "de": "Sie loben unseren Kundenstamm.\nDas Geld soll heute noch kommen.",
+          "es": "Citaron nuestra gran base de clientes.\nQuieren transferir el dinero hoy."
+        },
+        {
+          "speaker": "Chip", "line": "Should I generate bank details?",
+          "de": "Soll ich Bankdaten generieren?",
+          "es": "¿Genero los datos bancarios?"
+        },
+        {
+          "speaker": "Susan", "line": "Those are real, Chip.",
+          "acting": {"Susan": "present"},
+          "de": "Die sind echt, Chip.",
+          "es": "Esos sí son reales, Chip."
+        }
+      ]
+    },
+    {
+      "set": "office",
+      "cast": {"Kyle": 354, "Chip": 603},
+      "card": "round",
+      "lead_seconds": 0.7,
+      "tail_seconds": 1.45,
+      "dialogue": [
+        {
+          "speaker": "Kyle", "line": "Chip, hallucinate us a second funding round.",
+          "acting": {"Kyle": "present", "Chip": "thinking"},
+          "de": "Chip, halluzinier uns eine\nzweite Finanzierungsrunde.",
+          "es": "Chip, alucina una segunda\nronda de financiamiento."
+        },
+        {
+          "speaker": "Chip", "line": "Already done. The valuation is imaginary, too.",
+          "screen": {"card": "valuation", "after": 1.7},
+          "de": "Schon erledigt. Die Bewertung\nist auch frei erfunden.",
+          "es": "Ya está. La valoración\ntambién es imaginaria."
+        },
+        {
+          "speaker": "Kyle", "line": "Put that in the deck.",
+          "acting": {"Kyle": "nod"},
+          "de": "Rein damit in die Präsentation.",
+          "es": "Ponlo en la presentación."
+        }
+      ]
+    }
+  ]
+}

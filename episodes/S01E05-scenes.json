@@ -1,0 +1,186 @@
+{
+  "episode": "S01E05",
+  "title": "Prompt Engineering",
+  "minimum_seconds": 60,
+  "cards": {
+    "setup": [
+      "New AI Boost",
+      "Kyle’s big reveal",
+      "Announcement"
+    ],
+    "escalation": [
+      "Walter Investigates",
+      "The new engineer’s kit",
+      "Research"
+    ],
+    "punchline": [
+      "The Secret Technique",
+      "Just ‘please’ and ‘thk",
+      "Revealed"
+    ],
+    "outro": [
+      "Termination Letter",
+      "Susan’s polite send‑up",
+      "Final"
+    ]
+  },
+  "scenes": [
+    {
+      "set": "office",
+      "cast": {
+        "Kyle": 337,
+        "Walter": 590
+      },
+      "card": "setup",
+      "lead_seconds": 1,
+      "tail_seconds": 1,
+      "dialogue": [
+        {
+          "speaker": "Kyle",
+          "line": "Team, we’re hiring a prompt engineer—he’ll make our AI 10× faster!",
+          "acting": {
+            "Kyle": "present"
+          },
+          "de": "Team, wir stellen einen Prompt-Engineer\nein – er wird unsere KI 10× schneller\nmachen!",
+          "es": "Equipo, contratamos a un ingeniero de\nprompts: ¡hará que nuestra IA sea 10\nveces más rápida!"
+        },
+        {
+          "speaker": "Walter",
+          "line": "What’s the secret sauce, Kyle? I’ve seen algorithms, not magic.",
+          "acting": {
+            "Walter": "raise_brow",
+            "Kyle": "nod"
+          },
+          "de": "Was ist das Geheimnis, Kyle? Ich kenne\nAlgorithmen, nicht Zauberei.",
+          "es": "¿Cuál es el secreto, Kyle? He visto\nalgoritmos, no magia."
+        },
+        {
+          "speaker": "Kyle",
+          "line": "Just trust the process. He’ll be here tomorrow.",
+          "acting": {
+            "Kyle": "present"
+          },
+          "de": "Vertraue einfach dem Prozess. Er kommt\nmorgen.",
+          "es": "Confía en el proceso. Él llega mañana."
+        }
+      ]
+    },
+    {
+      "set": "office",
+      "cast": {
+        "Walter": 166,
+        "Chip": 369,
+        "Kyle": 563,
+        "Susan": 790
+      },
+      "card": "escalation",
+      "lead_seconds": 1,
+      "tail_seconds": 1,
+      "dialogue": [
+        {
+          "speaker": "Walter",
+          "line": "I’ve got the engineer’s notebook. Let’s see what’s in it.",
+          "acting": {
+            "Walter": "gesture"
+          },
+          "de": "Ich habe das Notizbuch des Ingenieurs.\nSchauen wir mal, was drinsteht.",
+          "es": "Tengo el cuaderno del ingeniero. Veamos\nqué hay dentro."
+        },
+        {
+          "speaker": "Chip",
+          "line": "Processing…",
+          "acting": {
+            "Chip": "thinking"
+          },
+          "de": "Verarbeitung…",
+          "es": "Procesando…"
+        },
+        {
+          "speaker": "Walter",
+          "line": "First line: ‘Please’. Second line: ‘Please’.",
+          "acting": {
+            "Walter": "gesture"
+          },
+          "de": "Erste Zeile: ‚Bitte‘. Zweite Zeile:\n‚Bitte‘.",
+          "es": "Primera línea: ‘Por favor’. Segunda\nlínea: ‘Por favor’."
+        },
+        {
+          "speaker": "Kyle",
+          "line": "That’s… oddly specific.",
+          "acting": {
+            "Kyle": "raise_brow"
+          },
+          "de": "Das ist… seltsam spezifisch.",
+          "es": "Eso es… extrañamente específico."
+        },
+        {
+          "speaker": "Susan",
+          "line": "I’ve seen ‘please’ used in accounting. It’s polite.",
+          "acting": {
+            "Susan": "present"
+          },
+          "de": "Ich habe ‘bitte’ in der Buchhaltung\ngesehen. Es ist höflich.",
+          "es": "He visto ‘por favor’ en contabilidad. Es\ncortés."
+        }
+      ]
+    },
+    {
+      "set": "office",
+      "cast": {
+        "Walter": 245,
+        "Kyle": 515,
+        "Chip": 763
+      },
+      "card": "punchline",
+      "lead_seconds": 1,
+      "tail_seconds": 1,
+      "dialogue": [
+        {
+          "speaker": "Walter",
+          "line": "He also writes ‘think carefully’ after every request.",
+          "acting": {
+            "Walter": "gesture"
+          },
+          "de": "Er schreibt auch ‘nachdenken’ nach jeder\nAnfrage.",
+          "es": "También escribe ‘piensa cuidadosamente’\ndespués de cada solicitud."
+        },
+        {
+          "speaker": "Kyle",
+          "line": "So the AI just obeys because it’s polite?",
+          "acting": {
+            "Kyle": "present"
+          },
+          "de": "Also gehorcht die KI, weil sie höflich\nist?",
+          "es": "¿Entonces la IA solo obedece porque es\neducada?"
+        },
+        {
+          "speaker": "Chip",
+          "line": "Please… think carefully…",
+          "acting": {},
+          "de": "Bitte… nachdenken…",
+          "es": "Por favor… piensa cuidadosamente…"
+        }
+      ]
+    },
+    {
+      "set": "office",
+      "cast": {
+        "Susan": 440
+      },
+      "card": "outro",
+      "lead_seconds": 1,
+      "tail_seconds": 1,
+      "dialogue": [
+        {
+          "speaker": "Susan",
+          "line": "We’re terminating your contract, please.",
+          "acting": {
+            "Susan": "present"
+          },
+          "de": "Wir kündigen Ihren Vertrag, bitte.",
+          "es": "Terminamos su contrato, por favor."
+        }
+      ]
+    }
+  ]
+}

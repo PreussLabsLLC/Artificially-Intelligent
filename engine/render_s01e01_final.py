@@ -81,18 +81,21 @@ def music_bed(source, timing):
     return (loop[indexes % period] * gains[:, None]).astype("<f4").tobytes()
 
 
-def mix(picture, tracks, timing, subtitles, output, temp):
+def mix(picture, tracks, timing, subtitles, output, temp, *, outro_rise=6.45):
     intermediate = temp / "intro-outro.m4a"
+    duration = timing["duration_seconds"]
+    outro_delay = round((duration - 10) * 1000)
     bookends = (
         "[0:a]aresample=48000,pan=stereo|c0=c0|c1=c0[show];"
         "[1:a]aresample=48000,atrim=duration=10,asetpts=PTS-STARTPTS,"
         "volume='if(lt(t,1.7),0.63,if(lt(t,2.15),0.63-0.55*(t-1.7)/0.45,0.08))':eval=frame,"
         "afade=t=out:st=9:d=1[intro];"
         "[2:a]aresample=48000,atrim=duration=10,asetpts=PTS-STARTPTS,"
-        "volume='if(lt(t,6.45),0.10,if(lt(t,7.05),0.10+0.90*(t-6.45)/0.60,1))':eval=frame,"
-        "afade=t=in:st=0:d=0.35,afade=t=out:st=9.85:d=0.15,adelay=50000:all=1[outro];"
+        f"volume='if(lt(t,{outro_rise}),0.10,"
+        f"if(lt(t,{outro_rise + 0.60}),0.10+0.90*(t-{outro_rise})/0.60,1))':eval=frame,"
+        f"afade=t=in:st=0:d=0.35,afade=t=out:st=9.85:d=0.15,adelay={outro_delay}:all=1[outro];"
         "[show][intro][outro]amix=inputs=3:duration=first:normalize=0,"
-        "alimiter=limit=0.97:level=false:latency=true,atrim=duration=60[mix]"
+        f"alimiter=limit=0.97:level=false:latency=true,atrim=duration={duration}[mix]"
     )
     subprocess.run([
         "ffmpeg", "-v", "error", "-n", "-i", str(picture), "-i", str(tracks["intro"]),
@@ -115,7 +118,7 @@ def mix(picture, tracks, timing, subtitles, output, temp):
         "-f", "f32le", "-ar", str(RATE), "-ac", "2", "-i", "-",
         *subtitle_inputs,
         "-filter_complex", "[1:a][2:a]amix=inputs=2:duration=first:normalize=0,"
-        "alimiter=limit=0.98:level=false:latency=true,atrim=duration=60[mix]",
+        f"alimiter=limit=0.98:level=false:latency=true,atrim=duration={duration}[mix]",
         "-map", "0:v:0", "-map", "[mix]", *subtitle_maps,
         "-c:v", "copy", "-c:a", "aac", "-c:s", "mov_text",
         "-b:a", "192k", "-movflags", "+faststart", str(output),

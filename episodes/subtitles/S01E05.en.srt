@@ -1,0 +1,54 @@
+1
+00:00:02,741 --> 00:00:07,074
+Team, we’re hiring a prompt engineer—he’ll
+make our AI 10× faster!
+
+2
+00:00:07,434 --> 00:00:11,677
+What’s the secret sauce, Kyle? I’ve seen
+algorithms, not magic.
+
+3
+00:00:12,027 --> 00:00:14,377
+Just trust the process. He’ll be here
+tomorrow.
+
+4
+00:00:20,191 --> 00:00:23,421
+I’ve got the engineer’s notebook. Let’s
+see what’s in it.
+
+5
+00:00:23,811 --> 00:00:24,655
+Processing…
+
+6
+00:00:25,015 --> 00:00:27,906
+First line: ‘Please’. Second line:
+‘Please’.
+
+7
+00:00:28,256 --> 00:00:29,466
+That’s… oddly specific.
+
+8
+00:00:29,816 --> 00:00:35,045
+I’ve seen ‘please’ used in accounting.
+It’s polite.
+
+9
+00:00:40,887 --> 00:00:44,078
+He also writes ‘think carefully’ after
+every request.
+
+10
+00:00:44,438 --> 00:00:46,488
+So the AI just obeys because it’s polite?
+
+11
+00:00:46,813 --> 00:00:48,292
+Please… think carefully…
+
+12
+00:00:54,124 --> 00:00:56,939
+We’re terminating your contract, please.

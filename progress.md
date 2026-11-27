@@ -148,3 +148,33 @@ Promoted the verified subtitle mux to `output/S01E01-Return-On-Investment.mp4` a
 Moved eight S01E01 review MP4s into `review/` beside `output/`. Verified their hashes after the move and confirmed the final export in `output/` retained its hash.
 
 Added the approved subtitled `output/S01E01-Return-On-Investment.mp4` to Git at the user's request. FFprobe verified the 60-second picture and audio and the three subtitle language tags.
+
+## S01E02 Chip audition
+
+Rendered `review/S01E02-Chip-audition.mp4` in `santa-dev` with `python3 engine/render_chip_audition.py review/S01E02-Chip-audition.mp4`. Staged Kyle asking to use the restroom and Chip approving the request on condition that he clock out first. The provisional Chip cutout follows the labeled tracked robot in the original office prop sheet, with a cyan display and an antenna lamp that goes amber before the reply and bright red on speech. Auditioned Kokoro `am_onyx` at 0.94× with a band-limited, lightly modulated voice. Kyle uses his existing voice and rig. Rhubarb generated 14 Kyle cues and 26 Chip cues. Inspected a frame during Chip's reply and verified full FFmpeg decode, 1920×1080 at 24 fps, and 172 frames (7.17 seconds). The audition is Git-ignored and the Chip design and voice are pending review.
+
+The user approved Chip’s audition. Recorded the cutout, voice settings, and status-light behavior in `bible/characters.md` for S01E02.
+
+## S01E02 — Chief Executive Algorithm
+
+Produced `output/S01E02-Chief-Executive-Algorithm.mp4` in `santa-dev` using the season outline, the new scene draft and `engine/render_s01e02.py`. Staged Chip removing Kyle from the org chart, appointing itself CEO, and Susan reporting triple projected profit. Used the established Kokoro voices for Kyle, Walter, and Chip and Piper Marlo for Susan. Reused the approved 172-frame Chip audition for the closing exchange and the S01E01 intro, outro, and softly ducked music bed. The staging was authored for S01E02.
+
+Verified the entire output decodes, 1920×1080 at 24 fps, 1,440 frames, 60.000 seconds, and English, German, and Latin American Spanish subtitle tracks. Each of the three embedded tracks round-tripped to its 16-cue SRT with matching text and times. Inspected rendered frames for the four beats and checked the revised profit board after the polish pass. The local episode MP4 is Git-ignored.
+
+Added `engine/produce_episode.py` as the command-line entry point for S01E01 and S01E02. Tested alternate outputs end to end in `santa-dev`. FFprobe verified 60.000 and 60.250 seconds respectively, with all three subtitle tracks in both exports. Verified that default invocations protect existing episode files, the alternate S01E02 render leaves the canonical SRTs intact, and an episode without a registered renderer is rejected.
+
+## S01E03 — Hallucination as a Service
+
+Added scene-plan discovery to the production command and rendered S01E03 from `episodes/S01E03-scenes.json` using `engine/render_scene_plan.py`. The plan contains the cast positions, acting directions, reaction holds, monitor cards, line-relative reveals, dialogue, and translations. The renderer reuses the four approved voices and rigs, the office set, and the series music mix. The investor's offer appears on the office monitor. The plan and screen text were authored for this episode.
+
+Ran `python3 engine/produce_episode.py S01E03` in `santa-dev`. FFmpeg decoded the full Git-ignored export. FFprobe verified 60.000 seconds, 1,440 frames at 24 fps, and all three selectable subtitle tracks. Each track's 15 cues round-tripped with matching text and timing. Inspected frames for the opening, zero-customer reveal, funding offer, and closing valuation. The scene-plan renderer currently supports the office and recurring cast.
+
+## Automatic scene-plan generation
+
+Added `agents/generate_scene_plan.py` to turn a season-bible episode ID into a schema-constrained office scene plan with local GPT-OSS. It preserves the bible's title and runtime floor, assembles deterministic cast layouts and monitor cues, and validates the result against the renderer's shared scene-plan rules. The command protects existing plans and supports an alternate output path. The cached [Unsloth GPT-OSS 20B GGUF model card](https://huggingface.co/unsloth/gpt-oss-20b-GGUF) lists Apache 2.0.
+
+Restarted the existing `walter-llm` service and generated the first S01E04 plan from the outline. Initial requests received HTTP 503 while the service loaded its weights, and two subsequent completions hit the token limit before the third completed. The first cut rendered through `engine/produce_episode.py` to `review/S01E04-generated.mp4`. FFprobe verified 1920×1080, 24 fps, 1,440 frames, and 60.000 seconds of H.264 and AAC, with English, German, and Latin American Spanish subtitle tracks. FFmpeg decoded the full cut and extracted eight subtitle cues per language matching the plan. Inspected the invoice scene. The first plan has 65 spoken words and relies on longer silent holds to meet the runtime floor.
+
+Derived minimum turn counts from the outline's beat lengths and included those counts in both the prompt and schema. With the revised prompt and low reasoning effort, the generator returned four scenes and 105 spoken words across 12 turns on its first attempt. Saved that model output as `episodes/S01E04-scenes.json` and rendered it with `engine/produce_episode.py S01E04 --output review/S01E04-generated-paced.mp4` with Hugging Face offline mode enabled. Verified a full FFmpeg decode, 60.000 seconds of picture and audio, 1,440 frames at 24 fps and 1920×1080, and all 12 cues matching the plan in each subtitle track. The review cut is Git-ignored. Verified that the generator protects the saved plan, the production CLI discovers it, and the shared validator accepts S01E03. The draft's closing line and German subtitle wording need editorial review.
+
+Copied the requested S01E04 cut to `output/S01E04-The-Cloud-Has-a-Silver-Invoice.mp4`. Verified its SHA-256 matches the paced review cut and confirmed the export is Git-ignored.
