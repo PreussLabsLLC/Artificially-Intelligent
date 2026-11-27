@@ -178,3 +178,7 @@ Restarted the existing `walter-llm` service and generated the first S01E04 plan 
 Derived minimum turn counts from the outline's beat lengths and included those counts in both the prompt and schema. With the revised prompt and low reasoning effort, the generator returned four scenes and 105 spoken words across 12 turns on its first attempt. Saved that model output as `episodes/S01E04-scenes.json` and rendered it with `engine/produce_episode.py S01E04 --output review/S01E04-generated-paced.mp4` with Hugging Face offline mode enabled. Verified a full FFmpeg decode, 60.000 seconds of picture and audio, 1,440 frames at 24 fps and 1920×1080, and all 12 cues matching the plan in each subtitle track. The review cut is Git-ignored. Verified that the generator protects the saved plan, the production CLI discovers it, and the shared validator accepts S01E03. The draft's closing line and German subtitle wording need editorial review.
 
 Copied the requested S01E04 cut to `output/S01E04-The-Cloud-Has-a-Silver-Invoice.mp4`. Verified its SHA-256 matches the paced review cut and confirmed the export is Git-ignored.
+
+## Episode exports for GitHub
+
+Selected the four local S01E02–S01E05 MP4s in `output/` for GitHub at the user's request. Confirmed each file is present and under 3 MB. The S01E01 final export is already tracked.
