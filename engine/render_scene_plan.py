@@ -1,6 +1,7 @@
 """Render an episode from a scene plan using the recurring cast and office set."""
 
 import argparse
+import json
 import math
 from pathlib import Path
 import re
@@ -92,15 +93,13 @@ def actors(cast, speaker, mouth, acting, blink):
     return "".join(parts)
 
 
-def render_frames(plan, timeline, frame_count, temp):
-    cache = {}
+def frame_states(timeline, frame_count):
     cue_index = 0
     for index in range(frame_count):
         sample = index * RATE // FPS
         while cue_index + 1 < len(timeline) and sample >= timeline[cue_index + 1]["start_sample"]:
             cue_index += 1
         cue = timeline[cue_index]
-        scene = plan["scenes"][cue["scene"]]
         speaker = cue.get("speaker") if sample < cue["end_sample"] else None
         mouth = mouth_at(cue, sample) if speaker else "X"
         screen = cue.get("screen")
@@ -109,20 +108,49 @@ def render_frames(plan, timeline, frame_count, temp):
         acting = cue.get("acting", {})
         blink = index % 108 in (21, 22, 23)
         title = index < 48
-        state = (cue["scene"], speaker, mouth, card, tuple(sorted(acting.items())), blink, title)
+        yield (cue["scene"], speaker, mouth, card, tuple(sorted(acting.items())), blink, title)
+
+
+def title_layer(title):
+    return ('<text x="480" y="507" text-anchor="middle" font-family="sans-serif" '
+            f'font-size="20" font-weight="bold" fill="#fff6dc">{escape(title)}</text>')
+
+
+def render_frames(plan, timeline, frame_count, temp):
+    cache = {}
+    for index, state in enumerate(frame_states(timeline, frame_count)):
+        scene_index, speaker, mouth, card, acting, blink, title = state
         frame = temp / f"frame-{index:05}.png"
         if state in cache:
             frame.hardlink_to(cache[state])
             continue
+        scene = plan["scenes"][scene_index]
         layers = [SETS[scene["set"]], monitor(plan["cards"][card]),
-                  actors(scene["cast"], speaker, mouth, acting, blink)]
+                  actors(scene["cast"], speaker, mouth, dict(acting), blink)]
         if title:
-            layers.append(f'<text x="480" y="507" text-anchor="middle" font-family="sans-serif" '
-                          f'font-size="20" font-weight="bold" fill="#fff6dc">{escape(plan["title"])}</text>')
+            layers.append(title_layer(plan["title"]))
         svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">' + "".join(layers) + "</svg>"
         run("rsvg-convert", "-w", "1920", "-h", "1080", "-o", str(frame), input=svg.encode())
         cache[state] = frame
     print(f"Rendered {len(cache)} unique frames", flush=True)
+
+
+def prepare_audio(plan, pipeline, model, temp, check_dialogue):
+    audio, timeline = record(plan, pipeline, model, temp)
+    wav = temp / "dialogue.wav"
+    if check_dialogue:
+        sf.write(wav, audio, RATE, subtype="PCM_16")
+        timing_file = temp / "dialogue.json"
+        timing_file.write_text(json.dumps({"sample_rate": RATE, "timeline": timeline}), encoding="utf-8")
+        run("uv", "run", "--no-project", "--with", "faster-whisper==1.2.1", "python",
+            str(Path(__file__).with_name("check_dialogue.py")), str(wav), str(timing_file))
+    lip_sync(timeline, audio, RATE, temp)
+    frame_samples = RATE // FPS
+    frame_count = math.ceil(len(audio) / frame_samples)
+    audio = np.pad(audio, (0, frame_count * frame_samples - len(audio)))
+    timing = {"duration_seconds": len(audio) / RATE, "sample_rate": RATE, "timeline": timeline}
+    sf.write(wav, audio, RATE, subtype="PCM_16")
+    return wav, timing, frame_count
 
 
 def main():
@@ -132,6 +160,8 @@ def main():
     parser.add_argument("plan", type=Path)
     parser.add_argument("--output", type=Path)
     parser.add_argument("--piper-model", type=Path, default=Path("/cache/huggingface/hub") / PIPER_MODEL)
+    parser.add_argument("--check-dialogue", action=argparse.BooleanOptionalAction, default=True,
+                        help="Flag possible dialogue errors before rendering (default: enabled)")
     args = parser.parse_args()
     try:
         plan = read_plan(args.plan)
@@ -151,16 +181,10 @@ def main():
     pipeline = KPipeline(lang_code="a", repo_id="hexgrad/Kokoro-82M", device="cpu")
     with TemporaryDirectory() as folder:
         temp = Path(folder)
-        audio, timeline = record(plan, pipeline, args.piper_model, temp)
-        lip_sync(timeline, audio, RATE, temp)
-        frame_samples = RATE // FPS
-        frame_count = math.ceil(len(audio) / frame_samples)
-        audio = np.pad(audio, (0, frame_count * frame_samples - len(audio)))
-        duration = len(audio) / RATE
-        timing = {"duration_seconds": duration, "sample_rate": RATE, "timeline": timeline}
+        wav, timing, frame_count = prepare_audio(plan, pipeline, args.piper_model, temp, args.check_dialogue)
+        timeline = timing["timeline"]
+        duration = timing["duration_seconds"]
         render_frames(plan, timeline, frame_count, temp)
-        wav = temp / "dialogue.wav"
-        sf.write(wav, audio, RATE, subtype="PCM_16")
         picture = temp / "picture.mp4"
         run("ffmpeg", "-v", "error", "-framerate", str(FPS), "-i", str(temp / "frame-%05d.png"),
             "-i", str(wav), "-c:v", "libx264", "-preset", "fast", "-pix_fmt", "yuv420p",

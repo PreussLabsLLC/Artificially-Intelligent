@@ -122,7 +122,7 @@ def actions(t, last_line, frame_sample, rate):
     return walter_pose, kyle_action, sheet, closing
 
 
-def frame(index, cue, beat, rate):
+def frame_layers(index, cue, beat, rate):
     t = index / FPS
     frame_sample = index * rate // FPS
     pose_time = (index // 2) / (FPS // 2)
@@ -149,7 +149,21 @@ def frame(index, cue, beat, rate):
         parts.append(kyle(mouth["Kyle"], *kyle_action, x=505 if beat == "punchline" else 537))
     if beat == "punchline":
         parts.append(susan(mouth["Susan"], lift, pose_time % 4.5 < 0.11 and speaker != "Susan", x=722))
-    return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">' + "".join(parts) + "</svg>"
+    return parts
+
+
+def frame(index, cue, beat, rate):
+    return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">' + "".join(
+        frame_layers(index, cue, beat, rate)) + "</svg>"
+
+
+def frame_cues(timeline, frame_count, rate):
+    cue_index = 0
+    for index in range(frame_count):
+        sample = index * rate // FPS
+        while cue_index + 1 < len(timeline) and sample >= timeline[cue_index + 1]["start_sample"]:
+            cue_index += 1
+        yield index, cue_index
 
 
 def final_mix(samples, rate, timeline):
@@ -194,11 +208,7 @@ def main():
         mix = temp / "mix.wav"
         sf.write(mix, final_mix(samples, rate, timeline), rate, subtype="PCM_16")
         cache = {}
-        cue_index = 0
-        for index in range(math.ceil(len(samples) * FPS / rate)):
-            sample = index * rate // FPS
-            while cue_index + 1 < len(timeline) and sample >= timeline[cue_index + 1]["start_sample"]:
-                cue_index += 1
+        for index, cue_index in frame_cues(timeline, math.ceil(len(samples) * FPS / rate), rate):
             cue = timeline[cue_index]
             svg = frame(index, cue, cue["beat"], rate)
             png = temp / f"frame-{index:05}.png"

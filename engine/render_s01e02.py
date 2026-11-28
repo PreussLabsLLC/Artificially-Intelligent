@@ -11,7 +11,7 @@ import numpy as np
 import soundfile as sf
 
 from episode_media import PIPER_MODEL, marlo, write_subtitles
-from render_animatic import lip_sync
+from render_animatic import frame_cues, lip_sync
 from render_chip_audition import CHIP_LINE, KYLE_LINE, chip, mouth_at, synthesize_chip
 from render_pilot import kyle
 from render_s01e01_final import MUSIC, ROOT, checked_input, mix
@@ -78,13 +78,9 @@ def monitor(screen, y):
 </g>"""
 
 
-def render_frames(timeline, frame_count, temp, title):
-    cache = {}
-    cue_index = 0
-    for index in range(frame_count):
+def frame_layers(timeline, frame_count, title):
+    for index, cue_index in frame_cues(timeline, frame_count, RATE):
         sample = index * RATE // FPS
-        while cue_index + 1 < len(timeline) and sample >= timeline[cue_index + 1]["start_sample"]:
-            cue_index += 1
         cue = timeline[cue_index]
         speaker = cue.get("speaker") if sample < cue["end_sample"] else None
         mouth = mouth_at(cue, sample) if speaker else "X"
@@ -105,10 +101,6 @@ def render_frames(timeline, frame_count, temp, title):
         pose = (0, 0.52 if speaker == "Walter" else 0, 0, 0, blink and speaker != "Walter")
         opening = index < 48
         state = (speaker, mouth, blink, beat, screen, chip_status, opening)
-        frame = temp / f"frame-{index:05}.png"
-        if state in cache:
-            frame.hardlink_to(cache[state])
-            continue
         parts = [OFFICE, monitor(screen, 38 if beat == "punchline" else 73),
                  walter(mouth if speaker == "Walter" else "X", pose, x=171),
                  kyle(mouth if speaker == "Kyle" else "X", *kyle_action, x=366),
@@ -118,6 +110,16 @@ def render_frames(timeline, frame_count, temp, title):
         if opening:
             parts.append(f'<text x="480" y="507" text-anchor="middle" font-family="sans-serif" '
                          f'font-size="20" font-weight="bold" fill="#fff6dc">{escape(title)}</text>')
+        yield state, parts
+
+
+def render_frames(timeline, frame_count, temp, title):
+    cache = {}
+    for index, (state, parts) in enumerate(frame_layers(timeline, frame_count, title)):
+        frame = temp / f"frame-{index:05}.png"
+        if state in cache:
+            frame.hardlink_to(cache[state])
+            continue
         svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">' + "".join(parts) + "</svg>"
         run("rsvg-convert", "-w", "1920", "-h", "1080", "-o", str(frame), input=svg.encode())
         cache[state] = frame

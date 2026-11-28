@@ -19,12 +19,18 @@ def main():
              for path in (ENGINE.parent / "episodes").glob("S[0-9][0-9]E[0-9][0-9]-scenes.json")}
     parser.add_argument("episode", type=str.upper, choices=sorted(RENDERERS.keys() | plans.keys()))
     parser.add_argument("--output", type=Path, help="Write an alternate MP4 without replacing the episode export")
+    parser.add_argument("--check-dialogue", action=argparse.BooleanOptionalAction,
+                        help="Check dialogue with local Whisper (default for scene-plan episodes)")
     args = parser.parse_args()
 
     if args.episode in RENDERERS:
+        if args.check_dialogue:
+            parser.error("--check-dialogue requires a scene-plan episode")
         command = [sys.executable, str(ENGINE / RENDERERS[args.episode])]
     else:
         command = [sys.executable, str(ENGINE / "render_scene_plan.py"), str(plans[args.episode])]
+        if args.check_dialogue is False:
+            command.append("--no-check-dialogue")
     if args.output is not None:
         command.extend(("--output", str(args.output.resolve())))
     return subprocess.run(command, cwd=ENGINE.parent).returncode

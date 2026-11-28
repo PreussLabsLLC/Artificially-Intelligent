@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artificially Intelligent</title>
+  <link rel="stylesheet" href="./studio.css">
+  <script src="./season-data.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p id="season"></p>
+      <h1 id="series">Artificially Intelligent</h1>
+    </header>
+    <p id="status" role="status">Loading season…</p>
+    <ol id="episodes" class="season"></ol>
+  </main>
+  <script>
+    "use strict";
+
+    async function isRendered(folder) {
+      try {
+        const response = await fetch(folder + "episode.json", {method: "HEAD", cache: "no-cache"});
+        return response.ok && response.headers.get("content-type")?.includes("json");
+      } catch {
+        return false;
+      }
+    }
+
+    async function loadSeason() {
+      const status = document.querySelector("#status");
+      try {
+        const fromDisk = location.protocol === "file:";
+        let season = globalThis.seasonData;
+        if (!fromDisk) {
+          const response = await fetch("./bible/S01-Artificially-Intelligent.json");
+          if (!response.ok) throw new Error("Missing season data");
+          season = await response.json();
+        }
+        document.querySelector("#series").textContent = season.series_title;
+        document.querySelector("#season").textContent = `Season ${season.season}`;
+        const entries = await Promise.all(season.episodes.map(async episode => {
+          const folder = `./${encodeURIComponent(episode.id)}/`;
+          const rendered = fromDisk ? season.rendered.includes(episode.id) : await isRendered(folder);
+          const item = document.createElement("li");
+          const title = document.createElement("h2");
+          if (rendered) {
+            const link = document.createElement("a");
+            link.href = folder + "index.html";
+            link.textContent = episode.title;
+            title.append(link);
+          } else {
+            title.textContent = episode.title;
+          }
+          item.append(title);
+          if (!rendered) {
+            const pending = document.createElement("span");
+            pending.className = "pending";
+            pending.textContent = "pending";
+            item.append(pending);
+          }
+          const premise = document.createElement("p");
+          premise.textContent = episode.premise;
+          item.append(premise);
+          return item;
+        }));
+        document.querySelector("#episodes").append(...entries);
+        status.hidden = true;
+      } catch {
+        status.textContent = "The season could not be loaded.";
+      }
+    }
+
+    loadSeason();
+  </script>
+</body>
+</html>

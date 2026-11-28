@@ -1,5 +1,6 @@
 """Shared voice and subtitle operations for episode production."""
 
+import re
 from textwrap import fill
 
 from render_s01e01_final import SUBTITLES
@@ -16,7 +17,9 @@ PIPER_MODEL = (
 def marlo(line, model, temp):
     text = temp / "susan.txt"
     wav = temp / "susan.wav"
-    text.write_text(line + "\n", encoding="utf-8")
+    # Piper can mispronounce words adjacent to smart quotes. Keep contractions.
+    speech = re.sub(r"‘(.+?)’(?!\w)", r"\1", line).replace("’", "'")
+    text.write_text(speech + "\n", encoding="utf-8")
     run("uv", "run", "--no-project", "--with", "piper-tts==1.8.0", "python", "-m", "piper",
         "-m", str(model), "-s", "2", "--length-scale", "1.08", "-i", str(text), "-f", str(wav))
     return pcm(wav, ("-af", "volume=0.8",))

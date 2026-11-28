@@ -182,3 +182,35 @@ Copied the requested S01E04 cut to `output/S01E04-The-Cloud-Has-a-Silver-Invoice
 ## Episode exports for GitHub
 
 Selected the four local S01E02–S01E05 MP4s in `output/` for GitHub at the user's request. Confirmed each file is present and under 3 MB. The S01E01 final export is already tracked.
+
+## S01E05 Susan dialogue review
+
+Compared Susan's two lines in the original mix against fresh Piper Marlo takes with the scripted and simplified punctuation, and against a Kokoro `af_bella` audition. Saved the comparison as `review/S01E05-Susan-voice-comparison.wav`. Whisper misheard several words in the original accounting line and transcribed every word of the simplified Marlo audition correctly. It heard “pleas” in the Bella audition. Kept Susan's approved Australian voice and normalized apostrophes and paired smart quotes in Piper input. The screenplay and subtitle text retain their punctuation.
+
+Added the optional `--check-dialogue` pass to scene-plan production using local faster-whisper 1.2.1 and the MIT-licensed English small.en model. It checks each dry take against the screenplay before lip sync. Based on the mixed-audio test, the final checker flags even a one-word mismatch.
+
+Rendered `review/S01E05-Prompt-Engineering-voice-review.mp4` via `engine/produce_episode.py S01E05 --check-dialogue` with local model caches. The initial 20% word-edit threshold flagged none of the 12 dry lines. FFmpeg decoded the whole cut and FFprobe verified 60.000 seconds, 1,440 frames and English, German and Spanish subtitle tracks. In the new mix Whisper correctly transcribed the closing line and heard “players” for “please” in the accounting line at 30 seconds. The review cut is ready for a listening check. The original export remains available.
+
+Enabled dialogue checking by default for scene-plan renders, with `--no-check-dialogue` as an opt-out. Verified command routing for the default invocation, both explicit flags, and the legacy S01E02 renderer. Both changed scripts passed Python compilation.
+
+## Interactive Web Studio
+
+Selected S01E03 for the initial browser target because its completed episode has a validated office scene plan. The scene plan and sample-timed dialogue cues are the common inputs. The MP4 and browser exporters now share voice preparation, Rhubarb timings, frame-state selection, cast rigs, office and monitor artwork, and music mixing. The web exporter deduplicates the SVG layers and records frame-indexed changes. The dependency-free browser player assembles those layers and follows the mixed audio clock. Earlier episodes with bespoke renderers need adapters to use this player.
+
+Built `web-build/S01E03` in `santa-dev` using offline model caches. The 24 fps timeline covers 1,440 frames with 322 SVG layer changes. FFprobe and a full FFmpeg decode verified the 60-second AAC soundtrack. Headless Edge loaded the package under a nested URL and passed play, pause, forward and backward seek, repeatable scene selection, restart, end and replay, and the narrow-screen 16:9 layout. The first seek test exposed Python's static server's lack of byte-range support. Fetching the short soundtrack into a browser Blob made seeking work there. The dialogue checker flagged Chip's composite-customer line and Susan's “Those are real, Chip.” line for listening.
+
+Re-rendered S01E03 to a separate MP4 through the existing production command. FFprobe verified 1,440 H.264 frames, 60 seconds of AAC audio, and English, German, and Spanish subtitle streams. The next milestone is to validate character replies from local Ollama against the existing cast and acting rules, synthesize them with the same voice and lip-sync functions, and serve them through FastAPI. After that, add director turn selection and session memory, then record the timed performance and audio for repeatable browser playback and MP4 export. The pilot's performance archive is an existing recording format to evaluate for that step.
+
+### Season 1 browser exports
+
+Generated S01E01, S01E02, S01E04, and S01E05 alongside the existing S01E03 under `web-build/`. S01E01 reuses the hash-verified dialogue and lip-sync cues and the original animatic staging and fan mix. S01E02 shares its draft staging with the MP4 renderer and rebuilds the closing audition with its original rig and voice settings. S01E04 and S01E05 use the scene-plan exporter and fresh dialogue. The S01E05 transcription check flagged Susan's closing line for listening after it heard “this year” in place of “this your.”
+
+Parsed every SVG layer change and decoded all five AAC soundtracks end to end. Audio and animation durations matched for every package. S01E02 runs 60.250 seconds and the other episodes run 60.000 seconds each. Headless Edge opened all five under nested static URLs and passed play, pause, forward and backward seeking, repeatable scene selection, restart, and the 16:9 aspect ratio.
+
+### Browser subtitles and season index
+
+Added a CC selector with English, German, Latin American Spanish, and Off. The player draws the selected cue from the same audio clock it uses for the animation. The browser exporter uses the pilot's approved SRT files and generates the other episodes' cues from the exact browser performance timing using the shared subtitle writer. The season index reads a packaged copy of the season bible and links packages as they become available.
+
+Refreshed all five local packages. The pilot's picture timeline matched the previous data, and its soundtrack had the same SHA-256 hash. S01E02–S01E05 used regenerated browser picture and audio, with the previous browser timelines and soundtracks backed up in the Windows temporary directory. The refreshed episodes each run 60.000 seconds. FFmpeg decoded all five soundtracks in full. Validated cue ranges and matching cue counts across all three languages per episode. Headless Edge verified five episode links and seven pending entries under a nested static URL, then verified all three subtitle choices, forward and backward seeking, restart, and Off on all five players.
+
+Added direct disk playback for the season index and episodes. The exporter packages JavaScript copies of the episode manifests and a season index derived from the bible and available browser exports. The disk player loads the adjacent soundtrack as local media. Refreshed the five existing packages using their saved data. Headless Edge and Firefox verified the five links, seven pending entries, local audio loading, and caption selection and seeking across all five episodes. Firefox also passed the same checks over HTTP.

@@ -70,6 +70,49 @@ def mouth_at(cue, sample):
                  if shape["start"] <= local < shape["end"]), "X")
 
 
+def record_audition(pipeline, temp):
+    kyle_audio, _ = synthesize(pipeline, "Kyle", KYLE_LINE, temp)
+    chip_audio = synthesize_chip(pipeline, CHIP_LINE, temp)
+    kyle_start = round(0.4 * RATE)
+    kyle_end = kyle_start + len(kyle_audio)
+    chip_start = kyle_end + round(0.62 * RATE)
+    chip_end = chip_start + len(chip_audio)
+    frame_count = math.ceil((chip_end / RATE + 1.15) * FPS)
+    samples = np.zeros(frame_count * RATE // FPS, dtype=np.float32)
+    samples[kyle_start:kyle_end] = kyle_audio
+    samples[chip_start:chip_end] = chip_audio
+    cues = [
+        {"speaker": "Kyle", "line": KYLE_LINE, "start_sample": kyle_start, "end_sample": kyle_end},
+        {"speaker": "Chip", "line": CHIP_LINE, "start_sample": chip_start, "end_sample": chip_end},
+    ]
+    lip_sync(cues, samples, RATE, temp)
+    return samples, cues
+
+
+def audition_layers(cues, frame_count):
+    kyle_cue, chip_cue = cues
+    kyle_start, kyle_end = kyle_cue["start_sample"], kyle_cue["end_sample"]
+    chip_start, chip_end = chip_cue["start_sample"], chip_cue["end_sample"]
+    for index in range(frame_count):
+        sample = index * RATE // FPS
+        kyle_mouth, chip_mouth = (mouth_at(cue, sample) for cue in cues)
+        status = "idle"
+        if kyle_end <= sample < chip_start:
+            status = "thinking"
+        elif chip_mouth != "X":
+            status = "speaking"
+        if kyle_start <= sample < kyle_end:
+            reaction = ("present", 0.35)
+        elif chip_end + 7200 <= sample < chip_end + 10080:
+            reaction = ("blink", 1)
+        elif sample >= chip_end:
+            reaction = ("raise_brow", 0.65)
+        else:
+            reaction = ("raise_brow", 0)
+        state = (kyle_mouth, reaction, status, chip_mouth)
+        yield state, [OFFICE, kyle(kyle_mouth, *reaction, x=365), chip(status, chip_mouth)]
+
+
 def main():
     from kokoro import KPipeline
 
@@ -83,47 +126,18 @@ def main():
     pipeline = KPipeline(lang_code="a", repo_id="hexgrad/Kokoro-82M", device="cpu")
     with TemporaryDirectory() as folder:
         temp = Path(folder)
-        kyle_audio, _ = synthesize(pipeline, "Kyle", KYLE_LINE, temp)
-        chip_audio = synthesize_chip(pipeline, CHIP_LINE, temp)
-        kyle_start = round(0.4 * RATE)
-        kyle_end = kyle_start + len(kyle_audio)
-        chip_start = kyle_end + round(0.62 * RATE)
-        chip_end = chip_start + len(chip_audio)
-        frame_count = math.ceil((chip_end / RATE + 1.15) * FPS)
-        samples = np.zeros(frame_count * RATE // FPS, dtype=np.float32)
-        samples[kyle_start:kyle_end] = kyle_audio
-        samples[chip_start:chip_end] = chip_audio
-        cues = [
-            {"speaker": "Kyle", "line": KYLE_LINE, "start_sample": kyle_start, "end_sample": kyle_end},
-            {"speaker": "Chip", "line": CHIP_LINE, "start_sample": chip_start, "end_sample": chip_end},
-        ]
-        lip_sync(cues, samples, RATE, temp)
+        samples, cues = record_audition(pipeline, temp)
+        frame_count = len(samples) * FPS // RATE
         wav = temp / "mix.wav"
         sf.write(wav, samples, RATE, subtype="PCM_16")
         cache = {}
-        for index in range(frame_count):
-            sample = index * RATE // FPS
-            kyle_mouth, chip_mouth = (mouth_at(cue, sample) for cue in cues)
-            status = "idle"
-            if kyle_end <= sample < chip_start:
-                status = "thinking"
-            elif chip_mouth != "X":
-                status = "speaking"
-            if kyle_start <= sample < kyle_end:
-                reaction = ("present", 0.35)
-            elif chip_end + 7200 <= sample < chip_end + 10080:
-                reaction = ("blink", 1)
-            elif sample >= chip_end:
-                reaction = ("raise_brow", 0.65)
-            else:
-                reaction = ("raise_brow", 0)
-            state = (kyle_mouth, reaction, status, chip_mouth)
+        for index, (state, parts) in enumerate(audition_layers(cues, frame_count)):
             frame = temp / f"frame-{index:04}.png"
             if state in cache:
                 frame.hardlink_to(cache[state])
                 continue
             svg = ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">'
-                   + OFFICE + kyle(kyle_mouth, *reaction, x=365) + chip(status, chip_mouth) + "</svg>")
+                   + "".join(parts) + "</svg>")
             run("rsvg-convert", "-w", "1920", "-h", "1080", "-o", str(frame), input=svg.encode())
             cache[state] = frame
         run("ffmpeg", "-v", "error", "-n", "-framerate", str(FPS), "-i", str(temp / "frame-%04d.png"),

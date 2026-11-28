@@ -81,7 +81,7 @@ def music_bed(source, timing):
     return (loop[indexes % period] * gains[:, None]).astype("<f4").tobytes()
 
 
-def mix(picture, tracks, timing, subtitles, output, temp, *, outro_rise=6.45):
+def mix(picture, tracks, timing, subtitles, output, temp, *, outro_rise=6.45, audio_only=False):
     intermediate = temp / "intro-outro.m4a"
     duration = timing["duration_seconds"]
     outro_delay = round((duration - 10) * 1000)
@@ -119,8 +119,8 @@ def mix(picture, tracks, timing, subtitles, output, temp, *, outro_rise=6.45):
         *subtitle_inputs,
         "-filter_complex", "[1:a][2:a]amix=inputs=2:duration=first:normalize=0,"
         f"alimiter=limit=0.98:level=false:latency=true,atrim=duration={duration}[mix]",
-        "-map", "0:v:0", "-map", "[mix]", *subtitle_maps,
-        "-c:v", "copy", "-c:a", "aac", "-c:s", "mov_text",
+        *([] if audio_only else ["-map", "0:v:0", "-c:v", "copy", "-c:s", "mov_text"]),
+        "-map", "[mix]", *subtitle_maps, "-c:a", "aac",
         "-b:a", "192k", "-movflags", "+faststart", str(output),
     ], input=music_bed(tracks["bed"], timing), check=True)
 
