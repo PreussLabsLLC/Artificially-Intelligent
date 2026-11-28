@@ -1,0 +1,44 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, sans-serif;
+  color: #f6f4eb;
+  background: #171d23;
+}
+
+body { margin: 0; }
+main { max-width: 72rem; margin: auto; padding: clamp(1rem, 4vw, 3rem); }
+header p { margin: 0 0 .35rem; color: #bdcbc4; }
+h1 { margin: 0 0 1.2rem; font-size: clamp(1.5rem, 4vw, 2.5rem); }
+#stage { display: block; width: 100%; aspect-ratio: 16 / 9; background: #101419; border-radius: .5rem; }
+.controls { display: flex; align-items: center; flex-wrap: wrap; gap: .6rem; margin-top: .9rem; }
+button { padding: .55rem .9rem; border: 1px solid #64756f; border-radius: .35rem; font: inherit; }
+#play { background: #c9dfc8; color: #16251c; min-width: 5.3rem; }
+button:disabled { opacity: .55; }
+input { min-width: 6rem; flex: 1; accent-color: #c9dfc8; }
+output { font-variant-numeric: tabular-nums; }
+#status { color: #bdcbc4; }
+.picture { position: relative; container-type: inline-size; }
+#caption {
+  position: absolute;
+  inset: auto 0 5%;
+  width: fit-content;
+  max-width: 88%;
+  margin: auto;
+  padding: .2em .5em;
+  background: #000e;
+  color: white;
+  font-size: clamp(.7rem, 3cqw, 1.8rem);
+  line-height: 1.25;
+  text-align: center;
+  white-space: pre-line;
+  pointer-events: none;
+}
+.captions:not([hidden]) { display: inline-flex; align-items: center; gap: .45rem; }
+.cc-icon { border: 1px solid; border-radius: .2rem; padding: .05em .25em; font-weight: 700; }
+.captions select { padding: .45rem; border: 1px solid #64756f; border-radius: .35rem; font: inherit; }
+a { color: #c9dfc8; }
+.season { padding-left: 1.75rem; }
+.season li { padding: .6rem 0 .9rem .35rem; border-bottom: 1px solid #39444c; }
+.season h2 { display: inline; font-size: 1.1rem; }
+.season p { margin: .3rem 0 0; color: #bdcbc4; }
+.season .pending { margin-left: .65rem; color: #bdcbc4; font-size: .88rem; }

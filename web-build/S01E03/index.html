@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artificially Intelligent</title>
+  <link rel="stylesheet" href="./studio.css?v=2">
+  <script src="./episode-data.js" defer></script>
+  <script src="./player.js?v=3" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p>Artificially Intelligent</p>
+      <h1 id="episode-title">Episode player</h1>
+    </header>
+    <div class="picture">
+      <svg id="stage" viewBox="0 0 960 540" role="img" aria-label="Animated episode"></svg>
+      <p id="caption" hidden></p>
+    </div>
+    <audio id="soundtrack" preload="auto"></audio>
+    <div class="controls">
+      <button type="button" id="play" disabled>Play</button>
+      <button type="button" id="restart" disabled>Restart</button>
+      <input id="seek" type="range" min="0" max="1" step="any" value="0" aria-label="Episode timeline" disabled>
+      <output id="time">0:00</output>
+      <label class="captions" id="captions" hidden>
+        <span class="cc-icon" aria-hidden="true">CC</span>
+        <select id="subtitle-language" aria-label="Subtitle language">
+          <option value="">Off</option>
+        </select>
+      </label>
+    </div>
+    <p id="status" role="status">Loading episode…</p>
+  </main>
+</body>
+</html>
